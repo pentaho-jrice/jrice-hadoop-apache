@@ -1,0 +1,64 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. 
+Vagrant.configure(2) do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://atlas.hashicorp.com/search.
+  config.vm.box = "ubuntu/trusty64"
+
+  config.vm.provider :virtualbox do |vb|
+    vb.name = "JRice Hadoop - Apache Sandbox"
+    vb.customize ["modifyvm", :id, "--memory", "2000"]
+  end
+
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  # Define the default values
+  #
+  # These values will be used if the user has not provided an override environment variable.
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  #define default values for environment variables
+  
+  
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  # Set Variables to be used for local machines and hadoop VMs.
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  # Export the environment variables to the hadoop sandbox VM.
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  # Set up synced folders between local machine and dev-env VM.
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  #config.vm.synced_folder "#{local_git_projects_dir}", "#{vm_git_projects_dir}", create: true
+  
+  config.vm.provision :shell, inline: 'wget --no-check-certificate https://github.com/aglover/ubuntu-equip/raw/master/equip_java8.sh && bash equip_java8.sh'
+
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  # Set up provisioners to setup hadoop sandbox VM.
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  config.vm.provision "shell", path: "provision/setup.sh"
+
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  # Expose 10 general purpose ports between from dev vm to local.
+  #
+  # These ports are exposed so you can run 10 arbitrary apps in dev vm and 
+  # expose the ports to local machine without having to touch any configuration.
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  config.vm.network "forwarded_port", guest: 7070, host: 7070
+  config.vm.network "forwarded_port", guest: 7170, host: 7170
+  config.vm.network "forwarded_port", guest: 7270, host: 7270
+  config.vm.network "forwarded_port", guest: 7370, host: 7370
+  config.vm.network "forwarded_port", guest: 7470, host: 7470
+  config.vm.network "forwarded_port", guest: 7570, host: 7570
+  config.vm.network "forwarded_port", guest: 7670, host: 7670
+  config.vm.network "forwarded_port", guest: 7770, host: 7770
+  config.vm.network "forwarded_port", guest: 7870, host: 7870
+  config.vm.network "forwarded_port", guest: 7970, host: 7970
+
+end
