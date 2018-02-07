@@ -84,10 +84,10 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "provision/configure-hadoop.sh"
   config.vm.provision "shell", path: "provision/configure-spark.sh"
   config.vm.provision "shell", path: "provision/format-hdfs.sh"
+  config.vm.provision "shell", path: "scripts/start-hadoop-hdfs.sh"
   config.vm.provision "shell", path: "provision/create-hdfs-directories-for-mapreduce-history.sh"
   config.vm.provision "shell", path: "provision/create-hdfs-directories-for-hive.sh"
   config.vm.provision "shell", path: "provision/create-hdfs-directories-for-spark-history.sh"
-  config.vm.provision "shell", path: "scripts/start-hadoop-hdfs.sh"
   config.vm.provision "shell", path: "scripts/start-hadoop-yarn.sh"
   config.vm.provision "shell", path: "scripts/start-spark-history-server.sh"
 
