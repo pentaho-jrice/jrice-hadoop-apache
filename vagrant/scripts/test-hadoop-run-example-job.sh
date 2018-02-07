@@ -1,8 +1,12 @@
 #!/bin/sh
-#
-# Hadoop - Apache Distribution - Configure Hadoop 
+#################################################################################################
+# Test Hadoop
 # 
-#   This script configures hadoop environment
+# This script tests that hadoop and yarn are set up correctly by submitting a sample YARN job
+#
+# Created By Joe Rice - 2/6/2018
+#################################################################################################
+
 echo "."
 echo "*********************************************************************************"
 echo "   Submit a sample job to hadoop..."

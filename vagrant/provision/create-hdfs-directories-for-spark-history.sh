@@ -12,7 +12,4 @@ echo "**************************************************************************
 
 cd /opt/hadoop-2.8.1/bin
 
-./hdfs dfs -mkdir -p /mr-history/tmp
-./hdfs dfs -mkdir -p /mr-history/done
-./hdfs dfs -chown -R yarn:hadoop  /mr-history
-./hdfs dfs -mkdir -p /user/hdfs
+./hdfs dfs -mkdir -p /user/spark/spark2ApplicationHistory

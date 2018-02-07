@@ -1,18 +1,18 @@
 #!/bin/sh
+#################################################################################################
+# Create Hive Directories in HDFS
 #
-# Hadoop - Apache Distribution - Configure Hadoop 
-# 
-#   This script configures hadoop environment
+# Created By Joe Rice - 2/6/2018
+#################################################################################################
+
 echo "."
 echo "*********************************************************************************"
-echo "   Create directories for the MapReduce history server..."
+echo "   Creating HDFS directories for Hive..."
 echo "*********************************************************************************"
-
-sudo su - hdfs
 
 cd /opt/hadoop-2.8.1/bin
 
-hdfs dfs -mkdir /tmp
-hdfs dfs -mkdir -p /user/hive/warehouse
-hdfs dfs -chmod g+w /tmp
-hdfs dfs -chmod g+w /user/hive/warehouse
+./hdfs dfs -mkdir /tmp
+./hdfs dfs -mkdir -p /user/hive/warehouse
+./hdfs dfs -chmod g+w /tmp
+./hdfs dfs -chmod g+w /user/hive/warehouse

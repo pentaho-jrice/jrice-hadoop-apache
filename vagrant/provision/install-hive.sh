@@ -1,21 +1,19 @@
 #!/bin/sh
+#################################################################################################
+# Install Hive
 #
-# Hadoop - Apache Distribution - Prepare Hadoop Environment
-# 
-#   This script downloads Hadoop distributions and prepares the enviornment.  Creates 
-#   directories, sets permissions, etc.
+# Created By Joe Rice - 2/6/2018
+#################################################################################################
 
 echo "."
 echo "*********************************************************************************
-echo "   downloading and installing hadoop core components..."
+echo "   Downloading and installing Hive..."
 echo "*********************************************************************************
-
-sudo su
 
 cd /root
 
-wget http://apache.cs.utah.edu/hive/hive-2.3.0/apache-hive-2.3.0-bin.tar.gz
+wget http://download.nextag.com/apache/hive/hive-2.3.2/apache-hive-2.3.2-bin.tar.gz
 
 cd /opt
 
-tar xvzf /root/apache-hive-2.3.0-bin.tar.gz
+tar xvzf /root/apache-hive-2.3.2-bin.tar.gz

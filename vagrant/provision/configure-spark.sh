@@ -1,18 +1,19 @@
 #!/bin/sh
 #################################################################################################
-# Create Map Reduce History Server Directories in HDFS
-#
+# Configure Spark
+# 
 # Created By Joe Rice - 2/6/2018
 #################################################################################################
 
 echo "."
 echo "*********************************************************************************"
-echo "   Create directories for the MapReduce history server..."
+echo "   Configuring Spark "
 echo "*********************************************************************************"
 
-cd /opt/hadoop-2.8.1/bin
-
-./hdfs dfs -mkdir -p /mr-history/tmp
-./hdfs dfs -mkdir -p /mr-history/done
-./hdfs dfs -chown -R yarn:hadoop  /mr-history
-./hdfs dfs -mkdir -p /user/hdfs
+#
+# Copy the config files and env scripts for spark to their proper location.
+#
+# Note:  These files are from this vagran git repo.  You can change them before "vagrant up"
+# to tweak the hadoop setup when the VM is created.
+#
+cp /home/vagrant/config-files/spark/spark-defaults.conf /opt/spark-2.2.0-bin-hadoop2.7/conf/spark-defaults.conf

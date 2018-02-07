@@ -1,8 +1,12 @@
 #!/bin/sh
-#
-# Hadoop - Apache Distribution - Configure Hadoop 
+#################################################################################################
+# Start HDFS
 # 
-#   This script configures hadoop environment
+# This script Starts HDFS Services - namenode, secondary namenode, and datanode
+#
+# Created By Joe Rice - 2/6/2018
+#################################################################################################
+
 echo "."
 echo "*********************************************************************************"
 echo "   Start HDFS Name Node..."

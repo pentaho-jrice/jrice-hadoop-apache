@@ -1,8 +1,11 @@
 #!/bin/sh
-#
-# Hadoop - Apache Distribution - Configure Hadoop 
+#################################################################################################
+# Start Yarn
 # 
-#   This script configures hadoop environment
+# This script Starts Yarn Services - Resource Manager, YARN Node Managre, MR History Service
+#
+# Created By Joe Rice - 2/6/2018
+#################################################################################################
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
@@ -10,8 +13,6 @@ echo "."
 echo "*********************************************************************************"
 echo "   Start YARN Resource Manager..."
 echo "*********************************************************************************"
-
-sudo su - yarn
 
 cd /opt/hadoop-2.8.1/sbin
 

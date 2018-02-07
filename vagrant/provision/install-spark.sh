@@ -1,16 +1,14 @@
 #!/bin/sh
+#################################################################################################
+# Install Spark
 #
-# Hadoop - Apache Distribution - Prepare Hadoop Environment
-# 
-#   This script downloads Hadoop distributions and prepares the enviornment.  Creates 
-#   directories, sets permissions, etc.
+# Created By Joe Rice - 2/6/2018
+#################################################################################################
 
 echo "."
 echo "*********************************************************************************
-echo "   downloading and installing hadoop core components..."
+echo "   downloading and installing Spark..."
 echo "*********************************************************************************
-
-sudo su
 
 cd /root
 

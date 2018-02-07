@@ -1,18 +1,19 @@
 #!/bin/sh
 #################################################################################################
-# Create Map Reduce History Server Directories in HDFS
+# Start Spark History Server
+# 
+# Note:  To configure spark history server, you can add spark.history properties to the 
+# /opt/spark-2.2.0-bin-hadoop2.7/conf/spark-defaults.conf file.
 #
 # Created By Joe Rice - 2/6/2018
 #################################################################################################
 
 echo "."
 echo "*********************************************************************************"
-echo "   Create directories for the MapReduce history server..."
+echo "   Start Spark History Server..."
 echo "*********************************************************************************"
 
-cd /opt/hadoop-2.8.1/bin
+cd /opt/spark-2.2.0-bin-hadoop2.7/sbin
 
-./hdfs dfs -mkdir -p /mr-history/tmp
-./hdfs dfs -mkdir -p /mr-history/done
-./hdfs dfs -chown -R yarn:hadoop  /mr-history
-./hdfs dfs -mkdir -p /user/hdfs
+./start-history-server.sh
+
