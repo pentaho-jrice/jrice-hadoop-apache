@@ -1,15 +1,10 @@
 #!/bin/sh
 #################################################################################################
-# Start the latest version of AEL
+# Clears the Karaf Cache.  
 #
-# Will attempt to stop it in case it's already running
+# Run this script when you update code on AEL
 # 
 # Created By Joe Rice - 2/7/2018
 #################################################################################################
 
-cd /home/vagrant/ael/latest/data-integration/adaptive-execution
-
-./daemon.sh stop
-./daemon.sh start
-
-tail -f daemon.log
+rm -R ~/ael/latest/data-integration/system/karaf/caches/

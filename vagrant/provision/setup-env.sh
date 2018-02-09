@@ -56,6 +56,39 @@ sudo apt-get install -y python
 sudo apt install -y python-pip
 sudo pip install docker
 
+
+echo "."
+echo "*********************************************************************************"
+echo "   Installing Ansible"
+echo "*********************************************************************************"
+sudo apt-get install software-properties-common -y 
+sudo apt-add-repository ppa:ansible/ansible -y 
+sudo apt-get update -y 
+sudo apt-get install ansible -y 
+# install ansible dependencies.  Boto, docker-py, and ec2.py
+sudo pip install boto
+sudo pip install boto3
+sudo pip install docker
+sudo wget https://raw.github.com/ansible/ansible/devel/contrib/inventory/ec2.py
+sudo mv ec2.py /etc/ansible
+sudo chmod +x /etc/ansible/ec2.py
+sudo wget https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.ini
+sudo mv ec2.ini /etc/ansible
+
+echo "."
+echo "*********************************************************************************"
+echo "   Installing Terraform"
+echo "*********************************************************************************"
+sudo curl -L https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip >~/terraform_0.11.3_linux_amd64.zip
+sudo unzip ~/terraform_0.11.3_linux_amd64.zip -d /usr/local/bin
+
+echo "."
+echo "*********************************************************************************"
+echo "   Installing Cloudstack CLI"
+echo "*********************************************************************************"
+sudo gem install cloudstack-cli
+
+
 echo "."
 echo "*********************************************************************************
 echo "   Installing JRebel"

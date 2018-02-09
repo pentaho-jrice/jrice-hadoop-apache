@@ -140,6 +140,8 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 53009, host: 53009
   config.vm.network "forwarded_port", guest: 53010, host: 53010 
   
+   # Pentaho AEL - OSGI
+  config.vm.network "forwarded_port", guest: 9051, host: 9051 
   
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Expose 10 general purpose ports between from dev vm to local.
