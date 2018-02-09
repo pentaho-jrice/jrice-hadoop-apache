@@ -13,7 +13,8 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider :virtualbox do |vb|
     vb.name = "JRice Hadoop Sandbox - Apache"
-    vb.customize ["modifyvm", :id, "--memory", "2000"]
+    vb.customize ["modifyvm", :id, "--memory", "8192"]
+    vb.customize ["modifyvm", :id, "--cpus", "2"]
   end
 
   # -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -22,17 +23,20 @@ Vagrant.configure(2) do |config|
   # These values will be used if the user has not provided an override environment variable.
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   #define default values for environment variables
+  
   local_git_projects_dir = "C:/git/pentaho"
   local_maven_conf_dir = "C:/dev-home/build/maven/apache-maven-3.5.0/conf"
   local_maven_repo_dir = "C:/Users/jrice/.m2"
   local_share_dir = "C:/Users/jrice/dev-env/pentaho/share-hadoop"
-  local_pentaho_dir = "C:/Users/jrice/dev-env/pentaho/ael"
+  local_ael_dir = "C:/ael"
+  local_pentaho_dir = "C:/dev"
   
   vm_git_projects_dir = "/home/vagrant/git"
   vm_maven_conf_dir = "/home/vagrant/workspace/maven/conf"
   vm_maven_repo_dir = "/home/vagrant/.m2"
   vm_share_dir = "/home/vagrant/share"
-  vm_pentaho_dir = "/home/vagrant/ael"
+  vm_ael_dir = "/home/vagrant/ael"
+  vm_pentaho_dir = "/home/vagrant/pentaho"
   
   
   # -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -57,7 +61,7 @@ Vagrant.configure(2) do |config|
   
   config.vm.provision :shell, inline: "echo \"export SPARK_HOME=/opt/spark-2.2.0-bin-hadoop2.7\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
   
-  config.vm.provision :shell, inline: "echo \"export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PIG_HOME/bin:$HIVE_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PIG_HOME/bin:$HIVE_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:/home/vagrant/scripts:/home/vagrant/scripts/ael\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
 
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Set up synced folders between local machine and dev-env VM.
@@ -69,7 +73,8 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "#{local_git_projects_dir}", "#{vm_git_projects_dir}", create: true
   config.vm.synced_folder "#{local_maven_conf_dir}", "#{vm_maven_conf_dir}", create: true
   config.vm.synced_folder "#{local_maven_repo_dir}", "#{vm_maven_repo_dir}", create: true
-  config.vm.synced_folder "#{local_share_dir}", "#{local_share_dir}", create: true
+  config.vm.synced_folder "#{local_share_dir}", "#{vm_share_dir}", create: true
+  config.vm.synced_folder "#{local_ael_dir}", "#{vm_ael_dir}", create: true
   config.vm.synced_folder "#{local_pentaho_dir}", "#{vm_pentaho_dir}", create: true
   
   # -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -83,13 +88,16 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "provision/install-spark.sh"
   config.vm.provision "shell", path: "provision/configure-hadoop.sh"
   config.vm.provision "shell", path: "provision/configure-spark.sh"
+  config.vm.provision "shell", path: "provision/configure-ael.sh"
   config.vm.provision "shell", path: "provision/format-hdfs.sh"
-  config.vm.provision "shell", path: "scripts/start-hadoop-hdfs.sh"
+  config.vm.provision "shell", path: "scripts/start-hadoop-hdfs.sh", run: "always"
   config.vm.provision "shell", path: "provision/create-hdfs-directories-for-mapreduce-history.sh"
   config.vm.provision "shell", path: "provision/create-hdfs-directories-for-hive.sh"
   config.vm.provision "shell", path: "provision/create-hdfs-directories-for-spark-history.sh"
-  config.vm.provision "shell", path: "scripts/start-hadoop-yarn.sh"
-  config.vm.provision "shell", path: "scripts/start-spark-history-server.sh"
+  config.vm.provision "shell", path: "provision/create-hdfs-directories-for-ael.sh"
+  config.vm.provision "shell", path: "provision/set-hdfs-directory-permissions.sh"
+  config.vm.provision "shell", path: "scripts/start-hadoop-yarn.sh", run: "always"
+  config.vm.provision "shell", path: "scripts/start-spark-history-server.sh", run: "always"
 
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Expose ports of Hadoop web apps and services.
@@ -119,11 +127,18 @@ Vagrant.configure(2) do |config|
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Expose ports of Pentaho apps and services.
   # -----------------------------------------------------------------------------------------------------------------------------------------------
-
   # Pentaho AEL
   config.vm.network "forwarded_port", guest: 53000, host: 53000 
   config.vm.network "forwarded_port", guest: 53001, host: 53001
   config.vm.network "forwarded_port", guest: 53002, host: 53002 
+  config.vm.network "forwarded_port", guest: 53003, host: 53003
+  config.vm.network "forwarded_port", guest: 53004, host: 53004 
+  config.vm.network "forwarded_port", guest: 53005, host: 53005 
+  config.vm.network "forwarded_port", guest: 53006, host: 53006 
+  config.vm.network "forwarded_port", guest: 53007, host: 53007
+  config.vm.network "forwarded_port", guest: 53008, host: 53008 
+  config.vm.network "forwarded_port", guest: 53009, host: 53009
+  config.vm.network "forwarded_port", guest: 53010, host: 53010 
   
   
   # -----------------------------------------------------------------------------------------------------------------------------------------------

@@ -20,6 +20,8 @@ echo "   installing common utilities"
 echo "*********************************************************************************
 
 sudo apt-get install -y dos2unix
+sudo apt-get install -y zip
+sudo apt-get install -y unzip
 	
 
 echo "."
@@ -53,6 +55,25 @@ sudo usermod -aG docker ubuntu
 sudo apt-get install -y python
 sudo apt install -y python-pip
 sudo pip install docker
+
+echo "."
+echo "*********************************************************************************
+echo "   Installing JRebel"
+echo "*********************************************************************************
+
+sudo curl -O http://dl.zeroturnaround.com/jrebel-stable-nosetup.zip
+unzip jrebel-stable-nosetup.zip -d /opt
+
+
+echo "."
+echo "*********************************************************************************
+echo "   Installing YourKit"
+echo "*********************************************************************************
+
+sudo curl -O https://www.yourkit.com/download/YourKit-JavaProfiler-2017.02-b71.zip
+unzip YourKit-JavaProfiler-2017.02-b71.zip -d /opt
+ln -s /opt/YourKit-JavaProfiler-2017.02/ /opt/YourKit
+
 	
 echo "."
 echo "*********************************************************************************
