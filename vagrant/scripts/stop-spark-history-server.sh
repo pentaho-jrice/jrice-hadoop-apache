@@ -1,17 +1,19 @@
 #!/bin/sh
 #################################################################################################
-# Clears the Karaf Cache.  
-#
-# Run this script when you update code on AEL
+# Start Spark History Server
 # 
-# Created By Joe Rice - 2/7/2018
+# Note:  To configure spark history server, you can add spark.history properties to the 
+# /opt/spark-2.2.0-bin-hadoop2.7/conf/spark-defaults.conf file.
+#
+# Created By Joe Rice - 2/6/2018
 #################################################################################################
 
 echo "."
 echo "*********************************************************************************"
-echo "   Clearing AEL Karaf Cache..."
+echo "   Start Spark History Server..."
 echo "*********************************************************************************"
 
-rm -f -R ~/ael/latest/data-integration/system/karaf/caches/
+cd /opt/spark-2.2.0-bin-hadoop2.7/sbin
 
-echo .
+./stop-history-server.sh
+

@@ -86,7 +86,7 @@ echo "."
 echo "*********************************************************************************"
 echo "   Installing Cloudstack CLI"
 echo "*********************************************************************************"
-sudo gem install cloudstack-cli
+sudo gem install cloudstack-cli 
 
 
 echo "."
@@ -107,6 +107,13 @@ sudo curl -O https://www.yourkit.com/download/YourKit-JavaProfiler-2017.02-b71.z
 unzip YourKit-JavaProfiler-2017.02-b71.zip -d /opt
 ln -s /opt/YourKit-JavaProfiler-2017.02/ /opt/YourKit
 
+echo "."
+echo "*********************************************************************************
+echo "   Installing libwebkitgtk (needed for PDI / Spoon)"
+echo "*********************************************************************************
+		
+sudo apt-get install libwebkitgtk-1.0-0
+	
 	
 echo "."
 echo "*********************************************************************************
