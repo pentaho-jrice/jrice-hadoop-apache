@@ -24,45 +24,69 @@ Vagrant.configure(2) do |config|
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   #define default values for environment variables
   
-  local_git_projects_dir = "C:/git/pentaho"
-  local_maven_conf_dir = "C:/dev-home/build/maven/apache-maven-3.5.0/conf"
-  local_maven_repo_dir = "C:/Users/jrice/.m2"
-  local_share_dir = "C:/Users/jrice/dev-env/pentaho/share-hadoop"
-  local_ael_dir = "C:/ael"
-  local_pentaho_dir = "C:/dev"
-  
-  vm_git_projects_dir = "/home/vagrant/git"
-  vm_maven_conf_dir = "/home/vagrant/workspace/maven/conf"
-  vm_maven_repo_dir = "/home/vagrant/.m2"
-  vm_share_dir = "/home/vagrant/share"
-  vm_ael_dir = "/home/vagrant/ael"
-  vm_pentaho_dir = "/home/vagrant/pentaho"
-  
-  
-  # -----------------------------------------------------------------------------------------------------------------------------------------------
-  # Set Variables to be used for local machines and hadoop VMs.
-  # -----------------------------------------------------------------------------------------------------------------------------------------------
-  
-  # -----------------------------------------------------------------------------------------------------------------------------------------------
-  # Export the environment variables to the hadoop sandbox VM.
-  # -----------------------------------------------------------------------------------------------------------------------------------------------
-  config.vm.provision :shell, inline: "rm -f /etc/profile.d/hadoop-env-vars.sh", run: "always"
-  config.vm.provision :shell, inline: "> /etc/profile.d/hadoop-env-vars.sh", run: "always"
-  config.vm.provision :shell, inline: "echo \"export JAVA_HOME=/usr/lib/jvm/java-8-oracle\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
-  config.vm.provision :shell, inline: "echo \"export HADOOP_HOME=/opt/hadoop-2.8.1\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
+  default_local_git_projects_dir = "~/dev-env/pentaho/git/"
+  default_local_apps_dir = "~/dev-env/pentaho/apps/"
+  default_local_maven_conf_dir = "~/dev-env/pentaho/maven/conf/"
+  default_local_maven_repo_dir = "~/dev-env/pentaho/maven/.m2"
+  default_local_aws_dir = "~/dev-env/pentaho/aws/"
+  default_local_aws_key_file_dir = "~/dev-env/pentaho/aws-keys/"
+  default_local_share_dir = "~/dev-env/pentaho/share/"
+  default_local_pentaho_base_dir = "~/dev-env/pentaho/dist/"
+  default_local_pentaho_user_dir = "~/.pentaho/"
+  default_local_pentaho_user_meta_dir = "~/.pentaho-meta/"
 
-  config.vm.provision :shell, inline: "echo \"export HADOOP_EXAMPLES=$HADOOP_HOME/share/hadoop/mapreduce\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
+  default_vm_git_projects_dir = "/home/vagrant/git"
+  default_vm_apps_dir = "/home/vagrant/workspace/apps"
+  default_vm_maven_conf_dir = "/home/vagrant/workspace/maven/conf"
+  default_vm_maven_repo_dir = "/home/vagrant/.m2"
+  default_vm_aws_dir = "/home/vagrant/.aws"
+  default_vm_aws_key_file_dir = "/home/vagrant/aws-keys"
+  default_vm_share_dir = "/home/vagrant/share"
+  default_vm_pentaho_base_dir = "/home/vagrant/pentaho/"
+  default_vm_pentaho_user_dir = "/home/vagrant/.pentaho/"
+  default_vm_pentaho_user_meta_dir = "/home/vagrant/.pentaho-meta/"
 
-  config.vm.provision :shell, inline: "echo \"export PIG_HOME=/opt/pig-0.17.0\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
-  config.vm.provision :shell, inline: "echo \"export PIG_CLASSPATH=$HADOOP_HOME/etc/hadoop/\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
+  default_aws_key_file_name = "pentaho-build.pem"
+    
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  # Set Variables to be used for local machines and for VMs.
+  #
+  # If an override environment variable exists on the local machine, it will use that.  Otherwise, it will set a default for each variable.
+  #
+  # Users can customize their dev environment VM by either 
+  #   - A) - Setting override environment variables on their shell  or....
+  #     B) - passing the variables to the vagrant up command.
+  #
+  # See this page for the override environment variable names:
+  #    https://github.com/pentaho-jrice/pentaho-dev-env/tree/master/vagrant
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
   
-  config.vm.provision :shell, inline: "echo \"export HIVE_HOME=/opt/apache-hive-2.3.2-bin\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
-  config.vm.provision :shell, inline: "echo \"export HIVE_CLASSPATH=$HADOOP_HOME/etc/hadoop/\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
-  
-  config.vm.provision :shell, inline: "echo \"export SPARK_HOME=/opt/spark-2.2.0-bin-hadoop2.7\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
-  
-  config.vm.provision :shell, inline: "echo \"export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PIG_HOME/bin:$HIVE_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:/home/vagrant/scripts:/home/vagrant/scripts/ael\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
+  local_git_projects_dir = ENV['PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR'] : "#{default_local_git_projects_dir}"
+  local_apps_dir = ENV['PENT_DEV_ENV_LOCAL_APPS_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_APPS_DIR'] : "#{default_local_apps_dir}"
+  local_maven_conf_dir = ENV['PENT_DEV_ENV_LOCAL_MAVEN_CONF_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_MAVEN_CONF_DIR'] : "#{default_local_maven_conf_dir}"
+  local_maven_repo_dir = ENV['PENT_DEV_ENV_LOCAL_MAVEN_REPO_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_MAVEN_REPO_DIR'] : "#{default_local_maven_repo_dir}"
+  local_aws_dir = ENV['PENT_DEV_ENV_LOCAL_AWS_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_AWS_DIR'] : "#{default_local_aws_dir}"
+  local_aws_key_file_dir = ENV['PENT_DEV_ENV_LOCAL_AWS_KEY_FILE_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_AWS_KEY_FILE_DIR'] : "#{default_local_aws_key_file_dir}"
+  local_share_dir = ENV['PENT_DEV_ENV_LOCAL_SHARE_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_SHARE_DIR'] : "#{default_local_share_dir}"
+  local_pentaho_base_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_BASE_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_BASE_DIR'] : "#{default_local_pentaho_base_dir}"
+  local_pentaho_user_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_USER_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_USER_DIR'] : "#{default_local_pentaho_user_dir}"
+  local_pentaho_user_meta_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_USER_META_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_USER_META_DIR'] : "#{default_local_pentaho_user_meta_dir}"
 
+  vm_git_projects_dir = ENV['PENT_DEV_ENV_VM_GIT_PROJECTS_DIR'] ? ENV['PENT_DEV_ENV_VM_GIT_PROJECTS_DIR'] : "#{default_vm_git_projects_dir}"
+  vm_apps_dir = ENV['PENT_DEV_ENV_VM_APPS_DIR'] ? ENV['PENT_DEV_ENV_VM_APPS_DIR'] : "#{default_vm_apps_dir}"
+  vm_maven_conf_dir = ENV['PENT_DEV_ENV_VM_MAVEN_CONF_DIR'] ? ENV['PENT_DEV_ENV_VM_MAVEN_CONF_DIR'] : "#{default_vm_maven_conf_dir}"
+  vm_maven_repo_dir = ENV['PENT_DEV_ENV_VM_MAVEN_REPO_DIR'] ? ENV['PENT_DEV_ENV_VM_MAVEN_REPO_DIR'] : "#{default_vm_maven_repo_dir}"
+  vm_aws_dir = ENV['PENT_DEV_ENV_VM_AWS_DIR'] ? ENV['PENT_DEV_ENV_VM_AWS_DIR'] : "#{default_vm_aws_dir}"
+  vm_aws_key_file_dir = ENV['PENT_DEV_ENV_VM_AWS_KEY_FILE_DIR'] ? ENV['PENT_DEV_ENV_VM_AWS_KEY_FILE_DIR'] : "#{default_vm_aws_key_file_dir}"
+  vm_share_dir = ENV['PENT_DEV_ENV_VM_SHARE_DIR'] ? ENV['PENT_DEV_ENV_VM_SHARE_DIR'] : "#{default_vm_share_dir}"
+  vm_pentaho_base_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_BASE_DIR'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_BASE_DIR'] : "#{default_vm_pentaho_base_dir}"
+  vm_pentaho_user_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_USER_DIR'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_USER_DIR'] : "#{default_vm_pentaho_user_dir}"
+  vm_pentaho_user_meta_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_USER_META_DIR'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_USER_META_DIR'] : "#{default_vm_pentaho_user_meta_dir}"
+
+  aws_key_file_name = ENV['PENT_DEV_ENV_AWS_KEY_FILE_NAME'] ? ENV['PENT_DEV_ENV_AWS_KEY_FILE_NAME'] : "#{default_aws_key_file_name}"
+  
+  vm_aws_key_file_path = ENV['PENT_DEV_ENV_AWS_KEY_FILE_PATH'] ? ENV['PENT_DEV_ENV_AWS_KEY_FILE_PATH'] : "#{vm_aws_key_file_dir}/#{aws_key_file_name}"
+  
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Set up synced folders between local machine and dev-env VM.
   # -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -71,12 +95,60 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "provision ", "/home/vagrant/provision", create: true
   
   config.vm.synced_folder "#{local_git_projects_dir}", "#{vm_git_projects_dir}", create: true
+  config.vm.synced_folder "#{local_apps_dir}", "#{vm_apps_dir}", create: true
   config.vm.synced_folder "#{local_maven_conf_dir}", "#{vm_maven_conf_dir}", create: true
   config.vm.synced_folder "#{local_maven_repo_dir}", "#{vm_maven_repo_dir}", create: true
+  config.vm.synced_folder "#{local_aws_dir}", "#{vm_aws_dir}", create: true
+  config.vm.synced_folder "#{local_aws_key_file_dir}", "#{vm_aws_key_file_dir}", create: true, mount_options: ["dmode=777", "fmode=400"]
   config.vm.synced_folder "#{local_share_dir}", "#{vm_share_dir}", create: true
-  config.vm.synced_folder "#{local_ael_dir}", "#{vm_ael_dir}", create: true
-  config.vm.synced_folder "#{local_pentaho_dir}", "#{vm_pentaho_dir}", create: true
+  config.vm.synced_folder "#{local_pentaho_base_dir}", "#{vm_pentaho_base_dir}", create: true
+  config.vm.synced_folder "#{local_pentaho_user_dir}", "#{vm_pentaho_user_dir}", create: true
+  config.vm.synced_folder "#{local_pentaho_user_meta_dir}", "#{vm_pentaho_user_meta_dir}", create: true
   
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  # Copy static environment variable config files to /etc/profile.d so the environment variablees for each app are available on login for all users
+  # 
+  # Each of the enviornment variables in those files will be availabe inside the VM.  Scripts can depend on them being set.
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+ 
+  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/hadoop/set-hadoop-env-vars.sh /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/hive/set-hive-env-vars.sh /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/pentaho-ael/set-pentaho-ael-env-vars.sh /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/pentaho-pdi/set-pentaho-pdi-env-vars.sh /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/pentaho-server/set-pentaho-server-env-vars.sh /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/pig/set-pig-env-vars.sh /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/spark/set-spark-env-vars.sh /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/global-vm/set-global-vm-static-env-vars.sh /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "dos2unix /etc/profile.d/*", run: "always"
+  
+  
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  # Set up the dynamic environment variables for the VM so they are available upon login for each user
+  # 
+  # Each of these enviornment variables will be availabe inside the VM.  Scripts can depend on them being set.
+  # -----------------------------------------------------------------------------------------------------------------------------------------------
+  
+  config.vm.provision :shell, inline: "rm -f /etc/profile.d/hadoop-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "> /etc/profile.d/hadoop-env-vars.sh", run: "always"
+  
+  config.vm.provision :shell, inline: "rm -f /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export GIT_PROJECTS_DIR=#{vm_git_projects_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export APPS_DIR=#{vm_apps_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export MAVEN_CONF_DIR=#{vm_maven_conf_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export MAVEN_REPO_DIR=#{vm_maven_repo_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export AWS_DIR=#{vm_aws_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export AWS_KEY_FILE_DIR=#{vm_aws_key_file_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export AWS_KEY_FILE_NAME=#{aws_key_file_name}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export AWS_KEY_FILE_PATH=#{vm_aws_key_file_path}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export SHARE_DIR=#{vm_share_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export PENTAHO_BASE_DIR=#{vm_pentaho_base_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export PENTAHO_USER_DIR=#{vm_pentaho_user_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export PENTAHO_USER_META_DIR=#{vm_pentaho_user_meta_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+
+  
+  config.vm.provision :shell, inline: "echo \"export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PIG_HOME/bin:$HIVE_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:/home/vagrant/scripts:/home/vagrant/scripts/ael\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
+
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Run Provision scripts to setup Java 8 and hadoop apps.
   # -----------------------------------------------------------------------------------------------------------------------------------------------

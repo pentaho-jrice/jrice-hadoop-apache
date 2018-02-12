@@ -71,8 +71,8 @@ echo "**************************************************************************
 echo "   Copying PDI Config Files..."
 echo "*********************************************************************************"
 
-cp /home/vagrant/config-files/ael/spoon.sh $PDI_DIST_DIR/$PDI_FILE_VERSION_NUMBER/ee/data-integration
-cp /home/vagrant/config-files/ael/Spoon.bat $PDI_DIST_DIR/$PDI_FILE_VERSION_NUMBER/ee/data-integration
+cp /home/vagrant/config-files/pentaho-pdi/spoon.sh $PDI_DIST_DIR/$PDI_FILE_VERSION_NUMBER/ee/data-integration
+cp /home/vagrant/config-files/pentaho-pdi/Spoon.bat $PDI_DIST_DIR/$PDI_FILE_VERSION_NUMBER/ee/data-integration
 
 #
 # CD into the new distribution folder and build the AEL PDI spark driver app
@@ -116,7 +116,7 @@ echo "**************************************************************************
 #
 # Copy the configuration files and scrips for AEL
 #
-cp /home/vagrant/config-files/ael/application.properties $AEL_DIST_DIR/latest/data-integration/adaptive-execution/config/application.properties
+cp /home/vagrant/config-files/pentaho-ael/application.properties $AEL_DIST_DIR/latest/data-integration/adaptive-execution/config/application.properties
 
 echo "."
 echo "*********************************************************************************"

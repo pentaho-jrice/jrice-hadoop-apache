@@ -127,4 +127,6 @@ find /home/vagrant/config-files -type f -print0 | xargs -0 dos2unix
 find /home/vagrant/scripts -type f -print0 | xargs -0 dos2unix
 find /home/vagrant/provision -type f -print0 | xargs -0 dos2unix
 
+sudo dos2unix /etc/profile.d/*
+
 	
