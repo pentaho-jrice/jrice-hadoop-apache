@@ -8,3 +8,4 @@ Also contains Hive, Pig, Spark and others
 
 Whoa!  There's a lot going on in that picture.  Let's break it down.
 
+First of all, that guy's way too excited.  But I can see why.  He just cloned this repo, ran "vagrant up" and he got all of that.  For free.  And it "just works".
