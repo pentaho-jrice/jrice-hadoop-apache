@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="75bdef15-40f8-4392-a49d-e66018910932" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/install-hadoop.sh" afterPath="$PROJECT_DIR$/vagrant/provision/install-hadoop.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/install-hive.sh" afterPath="$PROJECT_DIR$/vagrant/provision/install-hive.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/install-pig.sh" afterPath="$PROJECT_DIR$/vagrant/provision/install-pig.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/create-hdfs-directories-for-mapreduce-history.sh" afterPath="$PROJECT_DIR$/vagrant/provision/create-hdfs-directories-for-mapreduce-history.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/create-hdfs-directories-for-spark-history.sh" afterPath="$PROJECT_DIR$/vagrant/provision/create-hdfs-directories-for-spark-history.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/install-spark.sh" afterPath="$PROJECT_DIR$/vagrant/provision/install-spark.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/setup-env.sh" afterPath="$PROJECT_DIR$/vagrant/provision/setup-env.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/set-hdfs-directory-permissions.sh" afterPath="$PROJECT_DIR$/vagrant/provision/set-hdfs-directory-permissions.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +22,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="336">
-                <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+              <first_editor relative-caret-position="399">
+                <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -654,12 +653,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518483292240</updated>
-      <workItem from="1518483296834" duration="7220000" />
+      <workItem from="1518483296834" duration="9157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7220000" />
+    <option name="totallyTimeSpent" value="9157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -711,8 +710,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="336">
-            <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <first_editor relative-caret-position="399">
+            <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
             <folding />
           </first_editor>
           <second_editor />

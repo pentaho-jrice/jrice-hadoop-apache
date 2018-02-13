@@ -7,7 +7,7 @@
 
 echo "."
 echo "*********************************************************************************"
-echo "   Create directories for the MapReduce history server..."
+echo "   Setting the permissions for the HDFS directoriesr..."
 echo "*********************************************************************************"
 
 cd $HADOOP_HOME/bin
