@@ -1,4 +1,3 @@
-#!/bin/sh
 #################################################################################################
 # Install Hadoop - Apache Distribution
 #
@@ -12,11 +11,11 @@ HADOOP_VERSION_NUMBER=2.8.1
 HADOOP_DOWNLOAD_URL=http://apache.claz.org/hadoop/common/hadoop-$HADOOP_VERSION_NUMBER/hadoop-$HADOOP_VERSION_NUMBER.tar.gz
 
 echo "."
-echo "*********************************************************************************
+echo "*********************************************************************************"
 echo "   downloading and installing hadoop core components..."
 echo "     - version #:     $HADOOP_VERSION_NUMBER "
 echo "     - download url:  $HADOOP_DOWNLOAD_URL "
-echo "*********************************************************************************
+echo "*********************************************************************************"
 
 cd /root
 
@@ -27,9 +26,9 @@ cd /opt
 tar xvzf /root/hadoop-$HADOOP_VERSION_NUMBER.tar.gz
 
 echo "."
-echo "*********************************************************************************
+echo "*********************************************************************************"
 echo "   Setting up Hadoop Users..."
-echo "*********************************************************************************
+echo "*********************************************************************************"
 
 groupadd hadoop
 useradd -g hadoop yarn
@@ -37,9 +36,9 @@ useradd -g hadoop hdfs
 useradd -g hadoop mapred
 
 echo "."
-echo "*********************************************************************************
+echo "*********************************************************************************"
 echo "   Setting up Hadoop Data and Log Directories..."
-echo "*********************************************************************************
+echo "*********************************************************************************"
 
 mkdir -p /var/data/hadoop/hdfs/nn
 mkdir -p /var/data/hadoop/hdfs/snn
@@ -54,18 +53,18 @@ chmod g+w logs
 chown -R yarn:hadoop .
 
 echo "."
-echo "*********************************************************************************
+echo "*********************************************************************************"
 echo "   Creating SymLink for Hadoop..."
-echo "     - from:  /opt/hadoop-$HADOOP_VERSION_NUMBER
-echo "     - to:    $HADOOP_HOME
-echo "*********************************************************************************
+echo "     - from:  /opt/hadoop-$HADOOP_VERSION_NUMBER"
+echo "     - to:    $HADOOP_HOME"
+echo "*********************************************************************************"
 
 ln -s /opt/hadoop-$HADOOP_VERSION_NUMBER $HADOOP_HOME
 
 echo "."
-echo "*********************************************************************************
+echo "*********************************************************************************"
 echo "   Removing download file..."
-echo "     - /root/hadoop-$HADOOP_VERSION_NUMBER.tar.gz
-echo "*********************************************************************************
+echo "     - /root/hadoop-$HADOOP_VERSION_NUMBER.tar.gz"
+echo "*********************************************************************************"
 
 rm -f /root/hadoop-$HADOOP_VERSION_NUMBER.tar.gz

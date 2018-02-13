@@ -43,6 +43,7 @@ echo "export M2_HOME=/opt/maven" | sudo tee --append /etc/profile.d/mavenenv.sh
 echo 'export PATH=${M2_HOME}/bin:${PATH}' | sudo tee --append /etc/profile.d/mavenenv.sh
 sudo chmod +x /etc/profile.d/mavenenv.sh
 source /etc/profile.d/mavenenv.sh
+rm -f apache-maven-3.5.2-bin.tar.gz
 
 
 echo "."
@@ -96,6 +97,7 @@ echo "**************************************************************************
 
 sudo curl -O http://dl.zeroturnaround.com/jrebel-stable-nosetup.zip
 unzip jrebel-stable-nosetup.zip -d /opt
+rm -f jrebel-stable-nosetup.zip -d /opt
 
 
 echo "."
@@ -106,6 +108,7 @@ echo "**************************************************************************
 sudo curl -O https://www.yourkit.com/download/YourKit-JavaProfiler-2017.02-b71.zip
 unzip YourKit-JavaProfiler-2017.02-b71.zip -d /opt
 ln -s /opt/YourKit-JavaProfiler-2017.02/ /opt/YourKit
+rm -f YourKit-JavaProfiler-2017.02-b71.zip
 
 echo "."
 echo "*********************************************************************************

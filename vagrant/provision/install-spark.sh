@@ -10,11 +10,11 @@ SUPPORTED_HADOOP_VERSION=2.7
 SPARK_DOWNLOAD_URL=https://d3kbcqa49mib13.cloudfront.net/spark-$SPARK_VERSION_NUMBER-bin-hadoop$SUPPORTED_HADOOP_VERSION.tgz
 
 echo "."
-echo "*********************************************************************************
+echo "*********************************************************************************"
 echo "   downloading and installing Spark..."
 echo "     - version #:     $SPARK_VERSION_NUMBER "
 echo "     - download url:  $SPARK_DOWNLOAD_URL "
-echo "*********************************************************************************
+echo "*********************************************************************************"
 
 cd /root
 
@@ -27,18 +27,18 @@ cd /opt
 tar xvzf /root/spark-$SPARK_VERSION_NUMBER-bin-hadoop$SUPPORTED_HADOOP_VERSION.tgz
 
 echo "."
-echo "*********************************************************************************
+echo "*********************************************************************************"
 echo "   Creating SymLink for Hive..."
 echo "     - from:  /opt/spark-$SPARK_VERSION_NUMBER-bin-hadoop$SUPPORTED_HADOOP_VERSION
 echo "     - to:    $SPARK_HOME
-echo "*********************************************************************************
+echo "*********************************************************************************"
 
 ln -s /opt/spark-$SPARK_VERSION_NUMBER-bin-hadoop$SUPPORTED_HADOOP_VERSION $SPARK_HOME
 
 echo "."
-echo "*********************************************************************************
+echo "*********************************************************************************"
 echo "   Removing download file..."
 echo "     - /root/spark-$SPARK_VERSION_NUMBER-bin-hadoop$SUPPORTED_HADOOP_VERSION.tgz
-echo "*********************************************************************************
+echo "*********************************************************************************"
 
 rm -f /root/spark-$SPARK_VERSION_NUMBER-bin-hadoop$SUPPORTED_HADOOP_VERSION.tgz

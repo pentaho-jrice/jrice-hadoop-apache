@@ -11,4 +11,7 @@ He just cloned this repo, ran "vagrant up", and got a complete development envir
 * An Ubuntu Linux virtual machine running on his laptop.
 * A working apache hadoop cluster with usual suspects set up and running:  hdfs, yarn, hive, spark.
 * Docker Swarm Node, so he can deploy apps onto his laptop super easy and test his own apps in containers. 
-* Folders are synced between his desktop and VM.  
+* Folders are synced between his desktop and VM.  So he can switch back and forth.  Develop in his favorite Windows IDE.  Test against hadoop cluster in his VM.  No copying or SCPing files.
+* Maven and git are synced.  Maven in his VM will use same config file and local repo as desktop
+* CLI tools to access and deploy apps easily to cloud providers.
+* 
