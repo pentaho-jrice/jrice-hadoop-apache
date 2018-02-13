@@ -10,6 +10,6 @@ echo "**************************************************************************
 echo "   Creating HDFS directories for AEL..."
 echo "*********************************************************************************"
 
-cd /opt/hadoop-2.8.1/bin
+cd $HADOOP_HOME/bin
 
 ./hdfs dfs -mkdir -p /opt/pentaho

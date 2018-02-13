@@ -14,7 +14,7 @@ echo "**************************************************************************
 echo "   Start YARN Resource Manager..."
 echo "*********************************************************************************"
 
-cd /opt/hadoop-2.8.1/sbin
+cd $HADOOP_HOME/sbin
 
 ./yarn-daemon.sh start resourcemanager
 

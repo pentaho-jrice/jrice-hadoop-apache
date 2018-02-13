@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
 
   config.vm.provider :virtualbox do |vb|
-    vb.name = "JRice Hadoop Sandbox - Apache"
+    vb.name = "Pentaho Hadoop Dev Environment"
     vb.customize ["modifyvm", :id, "--memory", "8192"]
     vb.customize ["modifyvm", :id, "--cpus", "2"]
   end
@@ -31,9 +31,11 @@ Vagrant.configure(2) do |config|
   default_local_aws_dir = "~/dev-env/pentaho/aws/"
   default_local_aws_key_file_dir = "~/dev-env/pentaho/aws-keys/"
   default_local_share_dir = "~/dev-env/pentaho/share/"
-  default_local_pentaho_base_dir = "~/dev-env/pentaho/dist/"
+  default_local_pentaho_pdi_dir = "~/dev-env/pentaho/pdi/"
   default_local_pentaho_user_dir = "~/.pentaho/"
-  default_local_pentaho_user_meta_dir = "~/.pentaho-meta/"
+  default_local_pentaho_ael_dir = "~/dev-env/pentaho/ael/"
+  default_local_pentaho_server_dir = "~/dev-env/pentaho/server/"
+  default_local_user_scripts_dir = "~/dev-env/user-scripts/"
 
   default_vm_git_projects_dir = "/home/vagrant/git"
   default_vm_apps_dir = "/home/vagrant/workspace/apps"
@@ -42,9 +44,12 @@ Vagrant.configure(2) do |config|
   default_vm_aws_dir = "/home/vagrant/.aws"
   default_vm_aws_key_file_dir = "/home/vagrant/aws-keys"
   default_vm_share_dir = "/home/vagrant/share"
-  default_vm_pentaho_base_dir = "/home/vagrant/pentaho/"
+  default_vm_pentaho_pdi_dir = "/home/vagrant/pentaho/pdi/"
   default_vm_pentaho_user_dir = "/home/vagrant/.pentaho/"
-  default_vm_pentaho_user_meta_dir = "/home/vagrant/.pentaho-meta/"
+  default_vm_pentaho_ael_dir = "/home/vagrant/pentaho/ael/"
+  default_vm_pentaho_server_dir = "/home/vagrant/pentaho/server/"
+  default_vm_user_scripts_dir = "/home/vagrant/user-scripts/"
+  default_vm_provision_dir = "/home/vagrant/provision/"
 
   default_aws_key_file_name = "pentaho-build.pem"
     
@@ -68,9 +73,11 @@ Vagrant.configure(2) do |config|
   local_aws_dir = ENV['PENT_DEV_ENV_LOCAL_AWS_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_AWS_DIR'] : "#{default_local_aws_dir}"
   local_aws_key_file_dir = ENV['PENT_DEV_ENV_LOCAL_AWS_KEY_FILE_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_AWS_KEY_FILE_DIR'] : "#{default_local_aws_key_file_dir}"
   local_share_dir = ENV['PENT_DEV_ENV_LOCAL_SHARE_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_SHARE_DIR'] : "#{default_local_share_dir}"
-  local_pentaho_base_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_BASE_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_BASE_DIR'] : "#{default_local_pentaho_base_dir}"
+  local_pentaho_pdi_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_PDI_HOME'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_PDI_HOME'] : "#{default_local_pentaho_pdi_dir}"
   local_pentaho_user_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_USER_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_USER_DIR'] : "#{default_local_pentaho_user_dir}"
-  local_pentaho_user_meta_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_USER_META_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_USER_META_DIR'] : "#{default_local_pentaho_user_meta_dir}"
+  local_pentaho_ael_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_AEL_HOME'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_AEL_HOME'] : "#{default_local_pentaho_ael_dir}"
+  local_pentaho_server_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_SERVER_HOME'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_SERVER_HOME'] : "#{default_local_pentaho_server_dir}"
+  local_user_scripts_dir = ENV['PENT_DEV_ENV_LOCAL_USER_SCRIPT_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_USER_SCRIPT_DIR'] : "#{default_local_user_scripts_dir}"
 
   vm_git_projects_dir = ENV['PENT_DEV_ENV_VM_GIT_PROJECTS_DIR'] ? ENV['PENT_DEV_ENV_VM_GIT_PROJECTS_DIR'] : "#{default_vm_git_projects_dir}"
   vm_apps_dir = ENV['PENT_DEV_ENV_VM_APPS_DIR'] ? ENV['PENT_DEV_ENV_VM_APPS_DIR'] : "#{default_vm_apps_dir}"
@@ -79,9 +86,12 @@ Vagrant.configure(2) do |config|
   vm_aws_dir = ENV['PENT_DEV_ENV_VM_AWS_DIR'] ? ENV['PENT_DEV_ENV_VM_AWS_DIR'] : "#{default_vm_aws_dir}"
   vm_aws_key_file_dir = ENV['PENT_DEV_ENV_VM_AWS_KEY_FILE_DIR'] ? ENV['PENT_DEV_ENV_VM_AWS_KEY_FILE_DIR'] : "#{default_vm_aws_key_file_dir}"
   vm_share_dir = ENV['PENT_DEV_ENV_VM_SHARE_DIR'] ? ENV['PENT_DEV_ENV_VM_SHARE_DIR'] : "#{default_vm_share_dir}"
-  vm_pentaho_base_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_BASE_DIR'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_BASE_DIR'] : "#{default_vm_pentaho_base_dir}"
+  vm_pentaho_pdi_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_PDI_HOME'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_PDI_HOME'] : "#{default_vm_pentaho_pdi_dir}"
   vm_pentaho_user_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_USER_DIR'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_USER_DIR'] : "#{default_vm_pentaho_user_dir}"
-  vm_pentaho_user_meta_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_USER_META_DIR'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_USER_META_DIR'] : "#{default_vm_pentaho_user_meta_dir}"
+  vm_pentaho_ael_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_AEL_HOME'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_AEL_HOME'] : "#{default_vm_pentaho_ael_dir}"
+  vm_pentaho_server_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_SERVER_HOME'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_SERVER_HOME'] : "#{default_vm_pentaho_server_dir}"
+  vm_user_scripts_dir = ENV['PENT_DEV_ENV_VM_USER_SCRIPT_DIR'] ? ENV['PENT_DEV_ENV_VM_USER_SCRIPT_DIR'] : "#{default_vm_user_scripts_dir}"
+  vm_provision_dir = ENV['PENT_DEV_ENV_VM_PROVISION_DIR'] ? ENV['PENT_DEV_ENV_VM_PROVISION_DIR'] : "#{default_vm_provision_dir}"
 
   aws_key_file_name = ENV['PENT_DEV_ENV_AWS_KEY_FILE_NAME'] ? ENV['PENT_DEV_ENV_AWS_KEY_FILE_NAME'] : "#{default_aws_key_file_name}"
   
@@ -92,7 +102,7 @@ Vagrant.configure(2) do |config|
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   config.vm.synced_folder "scripts", "/home/vagrant/scripts", create: true
   config.vm.synced_folder "config-files", "/home/vagrant/config-files", create: true
-  config.vm.synced_folder "provision ", "/home/vagrant/provision", create: true
+  config.vm.synced_folder "provision ", "#{vm_provision_dir}", create: true
   
   config.vm.synced_folder "#{local_git_projects_dir}", "#{vm_git_projects_dir}", create: true
   config.vm.synced_folder "#{local_apps_dir}", "#{vm_apps_dir}", create: true
@@ -101,9 +111,11 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "#{local_aws_dir}", "#{vm_aws_dir}", create: true
   config.vm.synced_folder "#{local_aws_key_file_dir}", "#{vm_aws_key_file_dir}", create: true, mount_options: ["dmode=777", "fmode=400"]
   config.vm.synced_folder "#{local_share_dir}", "#{vm_share_dir}", create: true
-  config.vm.synced_folder "#{local_pentaho_base_dir}", "#{vm_pentaho_base_dir}", create: true
+  config.vm.synced_folder "#{local_pentaho_pdi_dir}", "#{vm_pentaho_pdi_dir}", create: true
   config.vm.synced_folder "#{local_pentaho_user_dir}", "#{vm_pentaho_user_dir}", create: true
-  config.vm.synced_folder "#{local_pentaho_user_meta_dir}", "#{vm_pentaho_user_meta_dir}", create: true
+  config.vm.synced_folder "#{local_pentaho_ael_dir}", "#{vm_pentaho_ael_dir}", create: true
+  config.vm.synced_folder "#{local_pentaho_server_dir}", "#{vm_pentaho_server_dir}", create: true
+  config.vm.synced_folder "#{local_user_scripts_dir}", "#{vm_user_scripts_dir}", create: true
   
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Copy static environment variable config files to /etc/profile.d so the environment variablees for each app are available on login for all users
@@ -111,6 +123,9 @@ Vagrant.configure(2) do |config|
   # Each of the enviornment variables in those files will be availabe inside the VM.  Scripts can depend on them being set.
   # -----------------------------------------------------------------------------------------------------------------------------------------------
  
+  # First, install dos2unix cuz we're gonna need it
+  config.vm.provision :shell, inline: "apt-get install -y dos2unix", run: "always"
+
   config.vm.provision :shell, inline: "cp /home/vagrant/config-files/hadoop/set-hadoop-env-vars.sh /etc/profile.d", run: "always"
   config.vm.provision :shell, inline: "cp /home/vagrant/config-files/hive/set-hive-env-vars.sh /etc/profile.d", run: "always"
   config.vm.provision :shell, inline: "cp /home/vagrant/config-files/pentaho-ael/set-pentaho-ael-env-vars.sh /etc/profile.d", run: "always"
@@ -142,9 +157,11 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, inline: "echo \"export AWS_KEY_FILE_NAME=#{aws_key_file_name}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
   config.vm.provision :shell, inline: "echo \"export AWS_KEY_FILE_PATH=#{vm_aws_key_file_path}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
   config.vm.provision :shell, inline: "echo \"export SHARE_DIR=#{vm_share_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
-  config.vm.provision :shell, inline: "echo \"export PENTAHO_BASE_DIR=#{vm_pentaho_base_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export PENTAHO_PDI_HOME=#{vm_pentaho_pdi_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
   config.vm.provision :shell, inline: "echo \"export PENTAHO_USER_DIR=#{vm_pentaho_user_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
-  config.vm.provision :shell, inline: "echo \"export PENTAHO_USER_META_DIR=#{vm_pentaho_user_meta_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export PENTAHO_AEL_HOME=#{vm_pentaho_ael_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export PENTAHO_SERVER_HOME=#{vm_pentaho_server_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export USER_SCRIPT_DIR=#{vm_user_scripts_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
 
   
   config.vm.provision :shell, inline: "echo \"export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PIG_HOME/bin:$HIVE_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:/home/vagrant/scripts:/home/vagrant/scripts/ael\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"

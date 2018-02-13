@@ -109,7 +109,7 @@ ln -s /opt/YourKit-JavaProfiler-2017.02/ /opt/YourKit
 
 echo "."
 echo "*********************************************************************************
-echo "   Installing libwebkitgtk (needed for PDI / Spoon)"
+echo "   Installing libwebkitgtk - needed for PDI / Spoon"
 echo "*********************************************************************************
 		
 sudo apt-get install libwebkitgtk-1.0-0

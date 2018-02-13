@@ -8,18 +8,23 @@
 # Created By Joe Rice - 2/6/2018
 #################################################################################################
 
+HADOOP_VERSION_NUMBER=2.8.1
+HADOOP_DOWNLOAD_URL=http://apache.claz.org/hadoop/common/hadoop-$HADOOP_VERSION_NUMBER/hadoop-$HADOOP_VERSION_NUMBER.tar.gz
+
 echo "."
 echo "*********************************************************************************
 echo "   downloading and installing hadoop core components..."
+echo "     - version #:     $HADOOP_VERSION_NUMBER "
+echo "     - download url:  $HADOOP_DOWNLOAD_URL "
 echo "*********************************************************************************
 
 cd /root
 
-wget http://apache.claz.org/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz
+wget $HADOOP_DOWNLOAD_URL
 
 cd /opt
 
-tar xvzf /root/hadoop-2.8.1.tar.gz
+tar xvzf /root/hadoop-$HADOOP_VERSION_NUMBER.tar.gz
 
 echo "."
 echo "*********************************************************************************
@@ -43,8 +48,24 @@ chown -R hdfs:hadoop /var/data/hadoop/hdfs
 mkdir -p /var/log/hadoop/yarn
 chown -R yarn:hadoop /var/log/hadoop/yarn
 
-cd /opt/hadoop-2.8.1
+cd /opt/hadoop-$HADOOP_VERSION_NUMBER
 mkdir logs
 chmod g+w logs
 chown -R yarn:hadoop .
 
+echo "."
+echo "*********************************************************************************
+echo "   Creating SymLink for Hadoop..."
+echo "     - from:  /opt/hadoop-$HADOOP_VERSION_NUMBER
+echo "     - to:    $HADOOP_HOME
+echo "*********************************************************************************
+
+ln -s /opt/hadoop-$HADOOP_VERSION_NUMBER $HADOOP_HOME
+
+echo "."
+echo "*********************************************************************************
+echo "   Removing download file..."
+echo "     - /root/hadoop-$HADOOP_VERSION_NUMBER.tar.gz
+echo "*********************************************************************************
+
+rm -f /root/hadoop-$HADOOP_VERSION_NUMBER.tar.gz

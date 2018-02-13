@@ -17,10 +17,10 @@ echo "**************************************************************************
 # Note:  These files are from this vagran git repo.  You can change them before "vagrant up"
 # to tweak the hadoop setup when the VM is created.
 #
-cp /home/vagrant/config-files/hadoop/core-site.xml /opt/hadoop-2.8.1/etc/hadoop/core-site.xml
-cp /home/vagrant/config-files/hadoop/hadoop-env.sh /opt/hadoop-2.8.1/etc/hadoop/hadoop-env.sh
-cp /home/vagrant/config-files/hadoop/hdfs-site.xml /opt/hadoop-2.8.1/etc/hadoop/hdfs-site.xml
-cp /home/vagrant/config-files/hadoop/mapred-env.sh /opt/hadoop-2.8.1/etc/hadoop/mapred-env.sh
-cp /home/vagrant/config-files/hadoop/mapred-site.xml /opt/hadoop-2.8.1/etc/hadoop/mapred-site.xml
-cp /home/vagrant/config-files/hadoop/yarn-env.sh /opt/hadoop-2.8.1/etc/hadoop/yarn-env.sh
-cp /home/vagrant/config-files/hadoop/yarn-site.xml /opt/hadoop-2.8.1/etc/hadoop/yarn-site.xml
+cp /home/vagrant/config-files/hadoop/core-site.xml $HADOOP_CONF_DIR/core-site.xml
+cp /home/vagrant/config-files/hadoop/hadoop-env.sh $HADOOP_CONF_DIR/hadoop-env.sh
+cp /home/vagrant/config-files/hadoop/hdfs-site.xml $HADOOP_CONF_DIR/hdfs-site.xml
+cp /home/vagrant/config-files/hadoop/mapred-env.sh $HADOOP_CONF_DIR/mapred-env.sh
+cp /home/vagrant/config-files/hadoop/mapred-site.xml $HADOOP_CONF_DIR/mapred-site.xml
+cp /home/vagrant/config-files/hadoop/yarn-env.sh $HADOOP_CONF_DIR/yarn-env.sh
+cp /home/vagrant/config-files/hadoop/yarn-site.xml $HADOOP_CONF_DIR/yarn-site.xml

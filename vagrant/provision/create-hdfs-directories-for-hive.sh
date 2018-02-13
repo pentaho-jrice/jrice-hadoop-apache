@@ -10,7 +10,7 @@ echo "**************************************************************************
 echo "   Creating HDFS directories for Hive..."
 echo "*********************************************************************************"
 
-cd /opt/hadoop-2.8.1/bin
+cd $HADOOP_HOME/bin
 
 ./hdfs dfs -mkdir /tmp
 ./hdfs dfs -mkdir -p /user/hive/warehouse

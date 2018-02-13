@@ -12,7 +12,7 @@ echo "**************************************************************************
 echo "   Start HDFS Name Node..."
 echo "*********************************************************************************"
 
-cd /opt/hadoop-2.8.1/sbin
+cd $HADOOP_HOME/sbin
 
 ./hadoop-daemon.sh start namenode
 

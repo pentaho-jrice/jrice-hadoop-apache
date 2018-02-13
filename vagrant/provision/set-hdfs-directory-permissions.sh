@@ -10,7 +10,7 @@ echo "**************************************************************************
 echo "   Create directories for the MapReduce history server..."
 echo "*********************************************************************************"
 
-cd /opt/hadoop-2.8.1/bin
+cd $HADOOP_HOME/bin
 
 ./hdfs dfs -chmod -R 777 /user
 ./hdfs dfs -chmod -R 777 /tmp

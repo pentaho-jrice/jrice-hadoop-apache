@@ -16,4 +16,4 @@ echo "**************************************************************************
 # Note:  These files are from this vagran git repo.  You can change them before "vagrant up"
 # to tweak the hadoop setup when the VM is created.
 #
-cp /home/vagrant/config-files/spark/spark-defaults.conf /opt/spark-2.2.0-bin-hadoop2.7/conf/spark-defaults.conf
+cp /home/vagrant/config-files/spark/spark-defaults.conf $SPARK_HOME/conf/spark-defaults.conf

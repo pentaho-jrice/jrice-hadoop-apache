@@ -10,6 +10,6 @@ echo "**************************************************************************
 echo "   Create directories for the MapReduce history server..."
 echo "*********************************************************************************"
 
-cd /opt/hadoop-2.8.1/bin
+cd $HADOOP_HOME/bin
 
 ./hdfs dfs -mkdir -p /user/spark/spark2ApplicationHistory
