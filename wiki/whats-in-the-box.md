@@ -22,4 +22,6 @@ Here's what's you get:
   - No having to run a maven build, copy jars, clear karaf caches, restart pentaho apps.  
   - What used to take 2 - 3 minutes per change now takes seconds.  Increasing your feedback loop and dramatically speeding up your developmet.
 
-  Alright, enough yakkety yak.  Time to clackity clack.  
+Alright, enough yakkety yak.  Time to clackity clack.  
+  
+[Getting Started](getting-started.md)
