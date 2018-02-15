@@ -2,9 +2,9 @@
 
 Here's what's you ned to get started:
 
-1. [Intall Virtual Box & Vagrant](install-virtual-box-vagrant.md)
+1. Clone this Repo to your Local Machine
 
-2. Clone this Repo to your Local Machine
+2. [Intall Virtual Box & Vagrant](install-virtual-box-vagrant.md)
 
 3. [Customize your environment](customize-environment.md)
 
