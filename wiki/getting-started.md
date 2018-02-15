@@ -10,7 +10,7 @@ Here's what's you ned to get started:
 
 4. Cd to <local-repo-folder>/vagrant and type "vagrant up"
     
-5. Get coffee, do your taxes, read War and Peace.  Keep banging away at code.  Wait 20 - 30 minutes for first time install *****
+5. Get coffee, do your taxes, read War and Peace.  Keep banging away at code.  Wait 20 - 30 minutes for first time install **\***
 
 6. [SSH into your new VM](ssh-into-vm.md)
 
