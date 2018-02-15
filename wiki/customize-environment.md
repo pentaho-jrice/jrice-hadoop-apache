@@ -18,11 +18,11 @@ This project defines a few standard synced folders. You can point them to your e
 
 Through environment variables.  
 
-Each synced folder has a default location it will sync to on your machine (under <user-home-dir>/dev-env).  
+Each synced folder has a default location it will sync to on your machine if no environment variable override is set.
 
-You can override any one of them by setting an environment variable.  You only need to set environment variable overrides for the ones you care about.
+You can override any one of them by setting an environment variable.  You only need to set environment variable overrides for the ones you care about.  The rest can be synced to default locations.
 
-## What are they?
+## What are the variables to set?
 
 Primary
 
@@ -37,12 +37,18 @@ Primary
 | PENT_DEV_ENV_LOCAL_PENTAHO_AEL_HOME | The directory where you keep your dev builds of AEL              | ~/dev-env/pentaho/ael |
 | PENT_DEV_ENV_LOCAL_PENTAHO_SERVER_HOME | The directory where you keep your dev builds of Pentaho Server              | ~/dev-env/pentaho/server |
 
-Secondary
 
 | Env Var Name | Description  |  Default Value   |
 | ------------ | -----------  | ---------------  |
-| PENT_DEV_ENV_LOCAL_PENTAHO_USER_DIR | XXX              | XXX |
-| PENT_DEV_ENV_LOCAL_APPS_DIR | XXX              | XXX |
-| PENT_DEV_ENV_LOCAL_SHARE_DIR | XXX              | XXX |
-| PENT_DEV_ENV_LOCAL_USER_SCRIPT_DIR | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_PENTAHO_USER_DIR | The pentaho user directory on your local machine (usually "~/.pentaho".  So you can share your metastores and other saved profile data.             | ~/.pentaho |
+| PENT_DEV_ENV_LOCAL_APPS_DIR | This is a geeneral purpose shared folder where you can share whatever apps you want to share between your local host and VM.                | ~/dev-env/pentaho/apps |
+| PENT_DEV_ENV_LOCAL_SHARE_DIR | Another general purpose share folder to use for whatever purpose you want.  I find it usual to share logs of apps running in VM.  Or to quickly copy files in and out of VM if need me              | ~/dev-env/pentaho/share |
+| PENT_DEV_ENV_LOCAL_USER_SCRIPT_DIR | This user-scripts folder is meant for any custom scripts tailored to your environment.  It is added to the path inside the VM so you can execute from anywhere.              | ~/dev-env/user-scripts |
+
+## OK  now what?
+
+Now that's out the way, I recommend setting at least the git and maven env variables to point to your exisitng folders. So they are in sync from the first time your VM boots.
+
+If you don't set any variables, that's cool.  the default folders will be created on your host and syned with VM.  And the env variables are read everytime you "vagrant up".  So you can always change later.
+
 [Back to Getting Started](getting-started.md)
