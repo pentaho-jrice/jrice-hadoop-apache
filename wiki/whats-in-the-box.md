@@ -3,7 +3,7 @@
 ![Arch Diagram](../pentaho-hadoop-dev-high-level-diagram.png)
 
 
-Here's what's you get:
+**Here's what's you get:**
 
 * An **Ubuntu Linux** virtual machine running on your laptop.  You can ssh into it and use like a local shell.  
 * A working **Apache hadoop cluster** set up and running:  hdfs, yarn, hive, spark, etc.
@@ -18,10 +18,26 @@ Here's what's you get:
   - Setting up, configuring, and deploying apps to remote Pentaho Big Data Clusters (CDH, HDP, MapR, etc).
 * **Ports are exposed** from VM to your desktop.  So, accessing **Web UIs** running in your VM is easy as typing "http://localhost<port-number>" into your browsewr
   - (Spark yourtory Server, Yarn Resource Manager, Pentaho Server, etc)
-* [AND on top of all that](https://www.youtube.com/watch?v=TJoBMayjlUo) you're running **[JRebel](https://zeroturnaround.com/software/jrebel/)**.  So you can **immediately see and test your Java code changes** to pentaho products running in the VM.  
+* [AND on top of all that](https://www.youtube.com/watch?v=TJoBMayjlUo) you're running **[JRebel](https://zeroturnaround.com/software/jrebel/)**.  So you can **immediately see and test your Java code changes**...like right away.  
   - No having to run a maven build, copy jars, clear karaf caches, restart pentaho apps.  
   - What used to take 2 - 3 minutes per change now takes seconds.  Increasing your feedback loop and dramatically speeding up your developmet.
+
+**Here's why you should care**
+
+* **It'll speed up development**
+  - Environment is pre-configured for debugging, profiling with YourKit, hot deploys & instant changes with JRebel.
+  - Pre-canned automation scripts for working with cloud and Big Data clusters.
+
+* **Shareable**
+  - Quick dev environment setup for new team members. 
+  - Somebody create a new script to automate some reptitive task?  Check it in and share with everybody.
+
+* **Portable**
+  - Same environment across Linux, Mac OSx, Windows and others...any OS that Vagrant and Docker supports
+
+
 
 Alright, enough yakkety yak.  Time to clackity clack.  
   
 [Getting Started](getting-started.md)
+****
