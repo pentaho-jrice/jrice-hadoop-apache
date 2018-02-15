@@ -53,7 +53,6 @@ If you don't set any variables, that's cool.  the default folders will be create
 
 <br>
 <br>
-<br>
 
 [< Intall Virtual Box & Vagrant](install-virtual-box-vagrant.md) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Project Home](../README.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ["vagrant up" >](vagrant-up.md)
 
