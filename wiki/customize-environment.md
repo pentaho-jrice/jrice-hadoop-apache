@@ -22,6 +22,27 @@ Each synced folder has a default location it will sync to on your machine (under
 
 You can override any one of them by setting an environment variable.  You only need to set environment variable overrides for the ones you care about.
 
+## What are they?
 
+Primary
 
+| Env Var Name | Description  |  Default Value   |
+| ------------ | -----------  | ---------------  |
+| PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR | Root directory of local pentaho git repos              | ~/dev-env/pentaho/git/ |
+| PENT_DEV_ENV_LOCAL_MAVEN_CONF_DIR | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_MAVEN_REPO_DIR | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_AWS_DIR | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_AWS_KEY_FILE_DIR | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_PENTAHO_PDI_HOME | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_PENTAHO_AEL_HOME | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_PENTAHO_SERVER_HOME | XXX              | XXX |
+
+Secondary
+
+| Env Var Name | Description  |  Default Value   |
+| ------------ | -----------  | ---------------  |
+| PENT_DEV_ENV_LOCAL_PENTAHO_USER_DIR | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_APPS_DIR | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_SHARE_DIR | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_USER_SCRIPT_DIR | XXX              | XXX |
 [Back to Getting Started](getting-started.md)
