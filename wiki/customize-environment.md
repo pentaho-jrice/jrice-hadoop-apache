@@ -28,7 +28,7 @@ Primary
 
 | Env Var Name | Description  |  Default Value   |
 | ------------ | -----------  | ---------------  |
-| &#x1F34E; PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR | Root directory of local pentaho git repo.  Suggested to point to the directory that has your current git projects so they are synced.              | ~/dev-env/pentaho/git/ |
+| PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR &#x1F34E;  | Root directory of local pentaho git repo.  Suggested to point to the directory that has your current git projects so they are synced.              | ~/dev-env/pentaho/git/ |
 | PENT_DEV_ENV_LOCAL_MAVEN_CONF_DIR | The direcotory of your current $MAVEN_HOME/conf directory.  This is so you can share your maven configs / credentials inside VM.              | ~/dev-env/pentaho/maven/conf |
 | PENT_DEV_ENV_LOCAL_MAVEN_REPO_DIR | The directory of your local maven repo.  So, when your VM runs maven, it can pick up on the files you already downloaded.              | ~/.m2 |
 | PENT_DEV_ENV_LOCAL_AWS_DIR | The directory of your AWS credentials and configs.  Usually "~/.aws".  So you can use your current aws credentials inside VM and keep them in sync.              | ~/.aws     |
