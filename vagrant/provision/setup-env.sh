@@ -44,6 +44,8 @@ echo 'export PATH=${M2_HOME}/bin:${PATH}' | sudo tee --append /etc/profile.d/mav
 sudo chmod +x /etc/profile.d/mavenenv.sh
 source /etc/profile.d/mavenenv.sh
 rm -f apache-maven-3.5.2-bin.tar.gz
+sudo rm -R /opt/maven/conf
+sudo ln -s $MAVEN_CONF_DIR /opt/maven/conf
 
 
 echo "."

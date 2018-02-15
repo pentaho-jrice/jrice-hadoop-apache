@@ -7,10 +7,10 @@ Here's what's you get:
 
 * An **Ubuntu Linux** virtual machine running on your laptop.
 * A working **Apache hadoop cluster** set up and running:  hdfs, yarn, hive, spark, etc.
-* **Docker Swarm Node**, so you can deploy apps onto your laptop super easy and test your own containerized apps. 
+* **Docker Swarm**, so you can deploy apps onto your laptop super easy and test your own containerized apps. 
 * **Folders are synced** between your desktop and VM.  So you can switch back and forth.  Develop in your favorite Windows IDE.  Test against hadoop cluster in your VM.  No copying or SCPing files.
 * **Maven and git are synced**.  Maven in your VM will use same config file and local repo as desktop. 
-* **CLI tools** to access and **deploy** apps easily to **cloud providers**, like AWS, Google Cloud, and our own internal Cloud Stack.
+* **CLI tools** to access and **deploy** apps to **cloud providers**, like AWS, Google Cloud, and our own internal Cloud Stack.
 * **Automation Scripts** to make using, developing, and testing Pentaho apps easier.  Scripts to:
   - Download and install latest QAT and snapshot versions of Pentaho Builds
   - Configure hadoop shims, AEL, server, and others
