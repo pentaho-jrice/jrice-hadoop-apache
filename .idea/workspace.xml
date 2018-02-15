@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bdef15-40f8-4392-a49d-e66018910932" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/clone-this-repo.md" afterPath="$PROJECT_DIR$/wiki/clone-this-repo.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/customize-environment.md" afterPath="$PROJECT_DIR$/wiki/customize-environment.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/getting-started.md" afterPath="$PROJECT_DIR$/wiki/getting-started.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/install-virtual-box-vagrant.md" afterPath="$PROJECT_DIR$/wiki/install-virtual-box-vagrant.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/ssh-into-vm.md" afterPath="$PROJECT_DIR$/wiki/ssh-into-vm.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/vagrant-up.md" afterPath="$PROJECT_DIR$/wiki/vagrant-up.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/whats-in-the-box.md" afterPath="$PROJECT_DIR$/wiki/whats-in-the-box.md" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +19,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="315">
-                <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -46,12 +40,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clone-this-repo.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clone-this-repo.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wiki/clone-this-repo.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="63">
-                <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -85,12 +79,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customize-environment.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="customize-environment.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wiki/customize-environment.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="522">
-                <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <first_editor relative-caret-position="123">
+                <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -168,8 +162,8 @@
         <option value="$PROJECT_DIR$/wiki/ssh-into-vm.md" />
         <option value="$PROJECT_DIR$/wiki/install-virtual-box-vagrant.md" />
         <option value="$PROJECT_DIR$/wiki/getting-started.md" />
-        <option value="$PROJECT_DIR$/wiki/customize-environment.md" />
         <option value="$PROJECT_DIR$/wiki/clone-this-repo.md" />
+        <option value="$PROJECT_DIR$/wiki/customize-environment.md" />
       </list>
     </option>
   </component>
@@ -788,12 +782,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518483292240</updated>
-      <workItem from="1518483296834" duration="40649000" />
+      <workItem from="1518483296834" duration="41070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40649000" />
+    <option name="totallyTimeSpent" value="41070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -857,7 +851,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="315">
-            <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -919,22 +913,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wiki/customize-environment.md">
+    <entry file="file://$PROJECT_DIR$/wiki/clone-this-repo.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="522">
-            <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <first_editor relative-caret-position="63">
+            <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wiki/clone-this-repo.md">
+    <entry file="file://$PROJECT_DIR$/wiki/customize-environment.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="63">
-            <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <first_editor relative-caret-position="123">
+            <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
             <folding />
           </first_editor>
           <second_editor />
