@@ -18,7 +18,8 @@ What's Next?
 
 <br>
 <br>
-<br> 
+<br>
+ 
 \* Yeah, it takes a while on first load.  It has the download big files and install a bunch of stuff.  
    But it's a 1-time hit.  After initial install, "vagrant up" takes ~1 - 2 minutes.  Then, you're rocking and rolling all day.
 
