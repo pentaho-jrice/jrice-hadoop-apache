@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bdef15-40f8-4392-a49d-e66018910932" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wiki/whats-in-the-box.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/Vagrantfile" afterPath="$PROJECT_DIR$/vagrant/Vagrantfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/config-files/pentaho-ael/application.properties" afterPath="$PROJECT_DIR$/vagrant/config-files/pentaho-ael/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/config-files/pentaho-pdi/spoon.sh" afterPath="$PROJECT_DIR$/vagrant/config-files/pentaho-pdi/spoon.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/setup-env.sh" afterPath="$PROJECT_DIR$/vagrant/provision/setup-env.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/ael-clear-karaf-cash.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/ael-clear-karaf-cash.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/ael-set-latest-version.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/ael-set-latest-version.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/ael-start.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/ael-start.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/ael-stop.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/ael-stop.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/ael-tail-log.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/ael-tail-log.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/build-spark-operations.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/build-spark-operations.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/cd-ael.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/cd-ael.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/deploy-pdi-engine-spark-to-ael.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/deploy-pdi-engine-spark-to-ael.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/deploy-spark-operations-to-ael.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/deploy-spark-operations-to-ael.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/download-pdi.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/download-pdi.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/scripts/ael/set-env.sh" afterPath="$PROJECT_DIR$/vagrant/scripts/ael/set-env.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +35,34 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="567">
-                <caret line="27" column="57" lean-forward="true" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+              <first_editor relative-caret-position="252">
+                <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="whats-in-the-box.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wiki/whats-in-the-box.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="504">
+                <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notres-on-pentaho-hadoop-dev-env.md" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/OneDrive - Pentaho Corp/dev-env/sandbox/BACKLOG-XXX - Pentaho Hadoop VM/notres-on-pentaho-hadoop-dev-env.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="504">
+                <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -28,6 +71,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>his</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,6 +88,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$USER_HOME$/OneDrive - Pentaho Corp/dev-env/sandbox/BACKLOG-XXX - Pentaho Hadoop VM/notres-on-pentaho-hadoop-dev-env.md" />
+        <option value="$PROJECT_DIR$/wiki/whats-in-the-box.md" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -522,6 +572,11 @@
               <item name="jrice-hadoop-apache" type="b2602c69:ProjectViewProjectNode" />
               <item name="jrice-hadoop-apache" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jrice-hadoop-apache" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jrice-hadoop-apache" type="462c0819:PsiDirectoryNode" />
+              <item name="wiki" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -535,7 +590,12 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - Pentaho Corp/dev-env/sandbox/BACKLOG-XXX - Pentaho Hadoop VM/notres-on-pentaho-hadoop-dev-env.md" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git\pentaho\jrice-hadoop-apache\wiki" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -649,12 +709,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518483292240</updated>
-      <workItem from="1518483296834" duration="10136000" />
+      <workItem from="1518483296834" duration="14839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10136000" />
+    <option name="totallyTimeSpent" value="14839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -703,11 +763,33 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/OneDrive - Pentaho Corp/dev-env/sandbox/BACKLOG-XXX - Pentaho Hadoop VM/notres-on-pentaho-hadoop-dev-env.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="504">
+            <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wiki/whats-in-the-box.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="504">
+            <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="567">
-            <caret line="27" column="57" lean-forward="true" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+          <first_editor relative-caret-position="252">
+            <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />

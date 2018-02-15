@@ -8,6 +8,9 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 
 source $DIR/set-env.sh
 
+lib/scp-from-remote-to-local.sh $REMOTE_AEL_SERVER_HOSTNAME $REMOTE_AEL_SERVER_USERNAME  $REMOTE_AEL_SERVER_PASSWORD $SOURCE_PDI_ENGINE_OPERATIONS_JAR_PATH $TARGET_AEL_PDI_ENGINE_OPS_JAR_PATH
+
+
 PENTAHO_EE_GIT_REPO=$GIT_PROJECTS_DIR/pentaho-ee
 PDI_ENGINE_SPARK_HOME=$PENTAHO_EE_GIT_REPO/adaptive-execution/pdi-engines/pdi-engine-spark
 SOURCE_PDI_ENGINE_SPARK_JAR_PATH=$PDI_ENGINE_SPARK_HOME/target/pdi-engine-spark-8.1.0.0-SNAPSHOT.jar
@@ -24,7 +27,3 @@ echo "    - to:  $TARGET_AEL_PDI_ENGINE_OPS_JAR_PATH "
 echo "*********************************************************************************"
 
 cp $SOURCE_PDI_ENGINE_SPARK_JAR_PATH $TARGET_AEL_PDI_ENGINE_OPS_JAR_PATH
-
-$DIR/ael-clear-karaf-cash.sh
-
-echo .

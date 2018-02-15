@@ -164,7 +164,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, inline: "echo \"export USER_SCRIPT_DIR=#{vm_user_scripts_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
 
   
-  config.vm.provision :shell, inline: "echo \"export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PIG_HOME/bin:$HIVE_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:/home/vagrant/scripts:/home/vagrant/scripts/ael\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export PATH=$PATH:/home/vagrant/scripts:/home/vagrant/provision:/home/vagrant/scripts/ael\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
 
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Run Provision scripts to setup Java 8 and hadoop apps.

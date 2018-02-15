@@ -22,7 +22,7 @@ echo "**************************************************************************
 sudo apt-get install -y dos2unix
 sudo apt-get install -y zip
 sudo apt-get install -y unzip
-	
+sudo apt-get install -y sshpass
 
 echo "."
 echo "*********************************************************************************
@@ -88,6 +88,13 @@ echo "**************************************************************************
 echo "   Installing Cloudstack CLI"
 echo "*********************************************************************************"
 sudo gem install cloudstack-cli 
+
+echo "."
+echo "*********************************************************************************"
+echo "   installing node.js"
+echo "*********************************************************************************"
+sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install nodejs -y 
 
 
 echo "."

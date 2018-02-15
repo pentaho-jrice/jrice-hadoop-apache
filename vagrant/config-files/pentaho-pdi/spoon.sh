@@ -238,7 +238,7 @@ OPT="$OPT $PENTAHO_DI_JAVA_OPTIONS -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2 -Djav
 OPT="$OPT -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8045"
 OPT=%OPT% "-Dsun.security.krb5.debug=true"
 OPT=%OPT% "-agentpath:/opt/jrebel/lib/libjrebel64.so"
-# OPT=%OPT% "-agentpath:/home/vagrant/apps/yourkit/bin/linux-aarch64/libyjpagent.so"
+# OPT=%OPT% "-agentpath:/opt/YourKit/bin/linux-aarch64/libyjpagent.so"
 
 # ***************
 # ** Run...    **

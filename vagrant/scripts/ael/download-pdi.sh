@@ -22,9 +22,9 @@ fi
 
 PDI_VERSION_NUMBER=$1
 
-PDI_DOWNLOAD_DIR=/home/vagrant/pentaho/downloads
-PDI_DIST_DIR=/home/vagrant/pentaho/dist
-AEL_DIST_DIR=/home/vagrant/ael
+PDI_DOWNLOAD_DIR=$PENTAHO_PDI_HOME/downloads
+PDI_DIST_DIR=$PENTAHO_PDI_HOME/dist
+AEL_DIST_DIR=$PENTAHO_AEL_HOME
 
 PDI_FOLDER_VERSION_NUMBER=8.1-QAT
 PDI_FILE_VERSION_NUMBER=8.1.0.0-$PDI_VERSION_NUMBER
@@ -120,12 +120,12 @@ cp /home/vagrant/config-files/pentaho-ael/application.properties $AEL_DIST_DIR/l
 
 echo "."
 echo "*********************************************************************************"
-echo "   U;loading the latest spark executor to HDFS..."
-echo "    - from this file:    /home/vagrant/ael/latest/pdi-spark-executor.zip "
+echo "   loading the latest spark executor to HDFS..."
+echo "    - from this file:    $AEL_DIST_DIR/latest/pdi-spark-executor.zip "
 echo "    - To this HDFS dir:  hdfs:/opt/pentaho/pdi-spark-executor.zip "
 echo "*********************************************************************************"
 
 #
 # Upload the latest spark executor.zip into HDFS
 #
-time hdfs dfs -put -f /home/vagrant/ael/latest/pdi-spark-executor.zip /opt/pentaho/pdi-spark-executor.zip
+time hdfs dfs -put -f $AEL_DIST_DIR/latest/pdi-spark-executor.zip /opt/pentaho/pdi-spark-executor.zip
