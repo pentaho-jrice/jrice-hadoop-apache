@@ -20,6 +20,9 @@ What's Next?
  
 \* Yeah, it takes a while on first load.  It has to download big files and install a bunch of stuff.  
    But it's a 1-time hit.  After initial install, "vagrant up" takes ~1 - 2 minutes.  Then, you're rocking and rolling all day.
+<br>
+<br>
+<br>
 
 [< Project Home](../README.md) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Project Home](../README.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [Clone this Repo >](clone-this-repo.md)
 
