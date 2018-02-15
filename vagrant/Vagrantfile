@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
   default_local_git_projects_dir = "~/dev-env/pentaho/git/"
   default_local_apps_dir = "~/dev-env/pentaho/apps/"
   default_local_maven_conf_dir = "~/dev-env/pentaho/maven/conf/"
-  default_local_maven_repo_dir = "~/dev-env/pentaho/maven/.m2"
+  default_local_maven_repo_dir = "~/.m2"
   default_local_aws_dir = "~/dev-env/pentaho/aws/"
   default_local_aws_key_file_dir = "~/dev-env/pentaho/aws-keys/"
   default_local_share_dir = "~/dev-env/pentaho/share/"
