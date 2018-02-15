@@ -5,7 +5,7 @@
 
 Here's what's you get:
 
-* An **Ubuntu Linux** virtual machine running on your laptop.
+* An **Ubuntu Linux** virtual machine running on your laptop.  You can ssh into it and use like a local shell.  
 * A working **Apache hadoop cluster** set up and running:  hdfs, yarn, hive, spark, etc.
 * **Docker Swarm**, so you can deploy apps onto your laptop super easy and test your own containerized apps. 
 * **Folders are synced** between your desktop and VM.  So you can switch back and forth.  Develop in your favorite Windows IDE.  Test against hadoop cluster in your VM.  No copying or SCPing files.
