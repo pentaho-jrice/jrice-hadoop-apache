@@ -24,4 +24,7 @@ cd <path-to-local-repo/vagrant
 
 vagrant plugin install vagrant-vbguest`
 ```
-[Back to Getting Started](getting-started.md)
+
+
+[< Clone this Repo](clone-this-repo.md) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [Customize your environment >](customize-environment.md)
+

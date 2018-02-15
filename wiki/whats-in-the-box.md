@@ -33,11 +33,12 @@
   - Somebody create a new script to automate some reptitive task?  Check it in and share with everybody.
 
 * **Portable**
+  - Moving to a new developemnt laptop? Recreate your entire dev environment in a few easy steps and pick up where you left off.
   - Same environment across Linux, Mac OSx, Windows and others...any OS that Vagrant and Docker supports
-
 
 
 Alright, enough yakkety yak.  Time to clackity clack.  
   
-[Getting Started](getting-started.md)
-****
+  
+[< Project Home](../README.md) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [Getting Started >](getting-started.md)
+

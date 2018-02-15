@@ -2,7 +2,7 @@
 
 ![Arch Diagram](pentaho-hadoop-dev-high-level-diagram.png)
 
-Pentaho Hasoop Dev Enviornment is a Vagrant-managed VM that is streamlined for development of Pentaho products.
+Pentaho Hasoop Dev Enviornment is a Vagrant-managed VM that streamlines development of Pentaho products.
 
 * [What's in the Box & Why should you care](wiki/whats-in-the-box.md)
 * [Get Set Up](wiki/getting-started.md)

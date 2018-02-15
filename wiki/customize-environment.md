@@ -51,4 +51,5 @@ Now that's out the way, I recommend setting at least the git and maven env varia
 
 If you don't set any variables, that's cool.  the default folders will be created on your host and syned with VM.  And the env variables are read everytime you "vagrant up".  So you can always change later.
 
-[Back to Getting Started](getting-started.md)
+[< Intall Virtual Box & Vagrant](install-virtual-box-vagrant.md) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ["vagrant up" >](vagrant-up.md)
+

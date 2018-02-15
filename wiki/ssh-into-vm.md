@@ -2,4 +2,8 @@
 
 < Work in Progres >
 
-[Back to Getting Started](getting-started.md)
+
+
+ [< "vagrant up"](vagrant-up.md) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [SSH into your new VM >](ssh-into-vm.md)
+
+
