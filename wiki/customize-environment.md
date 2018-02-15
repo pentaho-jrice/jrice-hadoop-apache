@@ -10,7 +10,7 @@ Without getting into all the details now, here's a few things to customize.  Ful
 
 ## What can you Customize?
 
-Synced folders.  Folders that are shared between your host desktop and your VM.  
+You can customize a few things.  But the most important right now are synced folders.  These are folders that are shared between your host desktop and your VM.  
 
 This project defines a few standard synced folders. You can point them to your existing directories
 
@@ -28,14 +28,14 @@ Primary
 
 | Env Var Name | Description  |  Default Value   |
 | ------------ | -----------  | ---------------  |
-| PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR | Root directory of local pentaho git repos              | ~/dev-env/pentaho/git/ |
-| PENT_DEV_ENV_LOCAL_MAVEN_CONF_DIR | XXX              | XXX |
-| PENT_DEV_ENV_LOCAL_MAVEN_REPO_DIR | XXX              | XXX |
-| PENT_DEV_ENV_LOCAL_AWS_DIR | XXX              | XXX |
-| PENT_DEV_ENV_LOCAL_AWS_KEY_FILE_DIR | XXX              | XXX |
-| PENT_DEV_ENV_LOCAL_PENTAHO_PDI_HOME | XXX              | XXX |
-| PENT_DEV_ENV_LOCAL_PENTAHO_AEL_HOME | XXX              | XXX |
-| PENT_DEV_ENV_LOCAL_PENTAHO_SERVER_HOME | XXX              | XXX |
+| PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR | Root directory of local pentaho git repo.  Suggested to point to the directory that has your current git projects so they are synced.              | ~/dev-env/pentaho/git/ |
+| PENT_DEV_ENV_LOCAL_MAVEN_CONF_DIR | The direcotory of your current $MAVEN_HOME/conf directory.  This is so you can share your maven configs / credentials inside VM.              | XXX |
+| PENT_DEV_ENV_LOCAL_MAVEN_REPO_DIR | The directory of your local maven repo.  So, when your VM runs maven, it can pick up on the files you already downloaded.              | XXX |
+| PENT_DEV_ENV_LOCAL_AWS_DIR | The directory of your AWS credentials and configs.  Usually "~/.aws".  So you can use your current aws credentials inside VM and keep them in sync.              | XXX |
+| PENT_DEV_ENV_LOCAL_AWS_KEY_FILE_DIR | Directory where you store your public and private keys.  So you can ssh into AWS instances.              | XXX |
+| PENT_DEV_ENV_LOCAL_PENTAHO_PDI_HOME | The directory where you keep dev builds of PDI.              | XXX |
+| PENT_DEV_ENV_LOCAL_PENTAHO_AEL_HOME | The directory where you keep your dev builds of AEL              | XXX |
+| PENT_DEV_ENV_LOCAL_PENTAHO_SERVER_HOME | The directory where you keep your dev builds of Pentaho Server              | XXX |
 
 Secondary
 
