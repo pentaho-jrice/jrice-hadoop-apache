@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bdef15-40f8-4392-a49d-e66018910932" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vagrant/pdi-ce-8.1.0.0-231.zip" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vagrant/provision/setup-env.sh" afterPath="$PROJECT_DIR$/vagrant/provision/setup-env.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/whats-in-the-box.md" afterPath="$PROJECT_DIR$/wiki/whats-in-the-box.md" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -18,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -31,12 +28,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="whats-in-the-box.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="whats-in-the-box.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wiki/whats-in-the-box.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="252">
-                <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+              <first_editor relative-caret-position="105">
+                <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -77,8 +74,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$USER_HOME$/OneDrive - Pentaho Corp/dev-env/sandbox/BACKLOG-XXX - Pentaho Hadoop VM/notres-on-pentaho-hadoop-dev-env.md" />
-        <option value="$PROJECT_DIR$/wiki/whats-in-the-box.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/wiki/whats-in-the-box.md" />
       </list>
     </option>
   </component>
@@ -697,12 +694,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518483292240</updated>
-      <workItem from="1518483296834" duration="17515000" />
+      <workItem from="1518483296834" duration="17755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17515000" />
+    <option name="totallyTimeSpent" value="17755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -762,22 +759,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wiki/whats-in-the-box.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="252">
-            <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <first_editor relative-caret-position="399">
+            <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/wiki/whats-in-the-box.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="399">
-            <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <first_editor relative-caret-position="105">
+            <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
             <folding />
           </first_editor>
           <second_editor />

@@ -1,4 +1,4 @@
-# Pentaho Hadoop Development Environment
+# What's in the Box?
 
 ![Arch Diagram](../pentaho-hadoop-dev-high-level-diagram.png)
 
