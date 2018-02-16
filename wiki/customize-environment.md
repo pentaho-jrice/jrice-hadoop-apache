@@ -4,7 +4,7 @@ Before firing up the VM for the first time, it would be helpful to customize a f
 
 You do this by setting environment variables on your local machine. 
 
-For now, set the env vars with &#x1F538; next to it.  You are telling the VM where your git and maven folders are so they can sync. 
+For now, set the env vars with &#x1F538; next to it.  You are telling the VM where your existing git and maven folders are so they can sync and be available inside the VM
 <br>
 <br>
 
