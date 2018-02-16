@@ -2,29 +2,13 @@
 
 Before firing up the VM for the first time, it would be helpful to customize a few things for your specific setup.
 
-This project tries to work with your current dev workflow and setup and not force any 1 way of doing things.
+You customize things by setting environment variables on your local machine.  The environment variables are overrides.  If you don't set, a default value will be chosen.
 
-At the same time, it tries to keep things consistent inside the VM to have sharable scripts that work for everyone.
+For now, you should customize 1 or more syn folders.  These are folders that are shared between your host desktop and your VM.
 
-Without getting into all the details now, here's a few things to customize.  Full details can be found [here](../vagrant/README.md)
+Tell the VM where your git and maven folders are by setting the environment variables where "Try it?" column has a &#x1F538;.  
 
-## What can you Customize?
-
-You can customize a few things.  But the most important right now are synced folders.  These are folders that are shared between your host desktop and your VM.  
-
-This project defines a few standard synced folders. You can point them to your existing directories
-
-## How do you customize?
-
-Through environment variables.  
-
-Each synced folder has a default location it will sync to on your machine if no environment variable override is set.
-
-You can override any one of them by setting an environment variable.  You only need to set environment variable overrides for the ones you care about.  The rest can be synced to default locations.
-
-## What are the variables to set?
-
-Primary
+Set the value to your current local folder foe each var.
 
 | Try it? | Env Var Name | Description  |  Default Value   |
 | --- | ------------ | -----------  | ---------------  |
@@ -40,12 +24,6 @@ Primary
 | | PENT_DEV_ENV_LOCAL_APPS_DIR | This is a geeneral purpose shared folder where you can share whatever apps you want to share between your local host and VM.                | ~/dev-env/pentaho/apps |
 | | PENT_DEV_ENV_LOCAL_SHARE_DIR | Another general purpose share folder to use for whatever purpose you want.  I find it usual to share logs of apps running in VM.  Or to quickly copy files in and out of VM if need me              | ~/dev-env/pentaho/share |
 | | PENT_DEV_ENV_LOCAL_USER_SCRIPT_DIR | This user-scripts folder is meant for any custom scripts tailored to your environment.  It is added to the path inside the VM so you can execute from anywhere.              | ~/dev-env/user-scripts |
-
-## OK  now what?
-
-Now that's out the way, I recommend setting at least the git and maven env variables to point to your exisitng folders. So they are in sync from the first time your VM boots.
-
-If you don't set any variables, that's cool.  the default folders will be created on your host and syned with VM.  And the env variables are read everytime you "vagrant up".  So you can always change later.
 
 <br>
 <br>
