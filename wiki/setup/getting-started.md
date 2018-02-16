@@ -8,9 +8,9 @@ Here's what's you ned to get started.  Follow these steps:
 
 3. [Customize your environment](customize-environment.md)
 
-4. ["vagrant up" - Start Up Your VM](vagrant-up.md)
+4. ["vagrant up" - Start Your VM](vagrant-up.md)
     
-5. Get coffee, do your taxes, read War and Peace.  Keep banging away at code.  Wait 20 - 30 minutes for first time install *
+5. Get some coffee, do your taxes, read _War and Peace_.  Keep banging away at code.  Wait 20 - 30 minutes for first time install *
 
 6. [SSH into your new VM](ssh-into-vm.md)
 
