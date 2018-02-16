@@ -2,9 +2,9 @@
 
 Before firing up the VM for the first time, it would be helpful to customize a few things for your specific setup.
 
-You do this by setting environment variables on your local machine. 
+You do this by setting environment variables on your local machine. For now, set the env vars with &#x1F538; next to it.  
 
-For now, set the env vars with &#x1F538; next to it.  You are telling the VM where your existing git and maven folders are so they can sync and be available inside the VM
+You are telling the VM where your existing git and maven folders are so they can sync and be available inside the VM
 <br>
 <br>
 
