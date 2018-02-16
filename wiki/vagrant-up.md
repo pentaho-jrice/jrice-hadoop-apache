@@ -8,7 +8,7 @@ cd <path-to-local-forked-git-repo>/vagrant
 vagrant up
 ```
 
-And now you wait......and wait.....................and wait
+And then you wait.........and wait............................and wait
 
 <br>
 <br>
