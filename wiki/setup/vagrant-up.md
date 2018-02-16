@@ -12,7 +12,7 @@ And then you wait.........and wait............................and wait
 
 Seriously, don't be alarmed if this takes up to 20 - 30 minutes.  
 
-If it takes longer than an hour, it hangs, or the process errors out, see [Troubshooting Guide](troubleshooting-setup.md)
+If it takes longer than an hour, if it hangs, or if it errors out, see [Troubshooting Guide](troubleshooting-setup.md)
 
 <br>
 <br>
