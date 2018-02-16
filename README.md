@@ -5,7 +5,7 @@
 Pentaho Hasoop Dev Enviornment is a Vagrant-managed VM that streamlines development of Pentaho products.
 
 * [What's in the Box & Why should you care](wiki/whats-in-the-box.md)
-* [Get Set Up](wiki/getting-started.md)
+* [Get Started](wiki/getting-started.md)
 * How-To's
   - Use JRebel for Rapid Development
   - Develop PDI & AEL in the dev VM
