@@ -1,6 +1,6 @@
-# Type "vagrant up"
+# "vagrant up" - Start Up Your VM
 
-< Work in Progreess >
+<The way Vagrant works is...from the command line, you "cd" to a directory that has a file named "Vagrantfile" and issue commands that start with "vagrant <cmd>" 
 
 <br>
 <br>
