@@ -2,11 +2,9 @@
 
 Before firing up the VM for the first time, it would be helpful to customize a few things for your specific setup.
 
-You customize things by setting environment variables on your local machine.  The environment variables are overrides.  If you don't set, a default value will be chosen.
+You do this by setting environment variables on your local machine. 
 
-For now, you should customize 1 or more syn folders.  These are folders that are shared between your host desktop and your VM.
-
-Tell the VM where your git and maven folders are by setting the environment variables where "Try it?" column has a &#x1F538;.  
+For now, set the env vars with &#x1F538; next to it.  You are telling the VM where your git and maven folders are so they can sync  
 
 Set the value to your current local folder foe each var.
 
