@@ -22,7 +22,7 @@ vagrant ssh
 ssh localhost -p 2222
 ```
 
-On Windows, you can use [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/ or [mobaxterm](https://mobaxterm.mobatek.net/download.html))
+On Windows, you can use [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/) or [mobaxterm](https://mobaxterm.mobatek.net/download.html))
 
 <br>
 <br>
