@@ -4,7 +4,7 @@ If all went well and it did not error out.....
 
 Congratulations.  You now have a VM with a running Hadoop cluster, Docker Swwarm Node, and a bunch of other goodies.
 
-You can not ssh into the VM and start using it.  There are 2 options:
+You can now ssh into the VM and start using it.  There are 2 options:
 
 ### Option 1 - Vagrant SSH from your host shell
 
