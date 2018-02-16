@@ -1,4 +1,4 @@
-# Step 6 - SSH Into VM
+# Step 6 - SSH Into Your New VM
 
 If all went well and it did not error out.....
 
