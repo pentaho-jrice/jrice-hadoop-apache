@@ -7,6 +7,7 @@ You do this by setting environment variables on your local machine.
 For now, set the env vars with &#x1F538; next to it.  You are telling the VM where your git and maven folders are so they can sync. 
 <br>
 <br>
+
 | Try it? | Env Var Name | Description  |  Default Value   |
 | --- | ------------ | -----------  | ---------------  |
 | &#x1F538; | PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR   | Root directory of local pentaho git repo.  Suggested to point to the directory that has your current git projects so they are synced.              | ~/dev-env/pentaho/git/ |
