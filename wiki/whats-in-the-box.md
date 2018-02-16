@@ -3,7 +3,7 @@
 ![Arch Diagram](../pentaho-hadoop-dev-high-level-diagram.png)
 
 
-**Here's what's you get:**
+### Here's what's you get:
 
 * An **Ubuntu Linux** virtual machine running on your laptop.  You can ssh into it and use like a local shell.  
 * A working **Apache hadoop cluster** set up and running:  hdfs, yarn, hive, spark, etc.
@@ -22,7 +22,7 @@
   - No having to run a maven build, copy jars, clear karaf caches, restart pentaho apps.  
   - What used to take 2 - 3 minutes per change now takes seconds.  Increasing your feedback loop and dramatically speeding up your developmet.
 
-**Here's why you should care**
+### Here's why you should care
 
 * **It'll speed up development**
   - Environment is pre-configured for debugging, profiling with YourKit, hot deploys & instant changes with JRebel.

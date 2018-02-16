@@ -29,7 +29,7 @@ AEL_DIST_DIR=$PENTAHO_AEL_HOME
 PDI_FOLDER_VERSION_NUMBER=8.1-QAT
 PDI_FILE_VERSION_NUMBER=8.1.0.0-$PDI_VERSION_NUMBER
 
-PDI_DOWNLOAD_URL=http://build.pentaho.com/hosted/8.1-QAT/$PDI_VERSION_NUMBER/pdi-ce-$PDI_FILE_VERSION_NUMBER.zip
+PDI_DOWNLOAD_URL=http://build.pentaho.com/hosted/8.1-QAT/$PDI_VERSION_NUMBER/pdi-ee-client-$PDI_FILE_VERSION_NUMBER.zip
 
 #
 # Create new download directory for new version and download new version of PDI
