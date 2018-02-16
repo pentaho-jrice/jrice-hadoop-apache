@@ -4,8 +4,6 @@ You will need to install both Vagrant and VirtualBox if you do not already have 
 
 Installation for both are pretty simple.  Download the installer for your OS.  Run the installer.  Follow directions and choose defaults when in doubt. 
 
-Resources are below.
-
 ## Virtual Box
 
 * [Downloads](https://www.virtualbox.org/wiki/Downloads)
