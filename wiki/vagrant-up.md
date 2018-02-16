@@ -1,6 +1,14 @@
 # "vagrant up" - Start Up Your VM
 
-<The way Vagrant works is...from the command line, you "cd" to a directory that has a file named "Vagrantfile" and issue commands that start with "vagrant <cmd>" 
+Now it's time to fire up your dev VM.  You do this issueing "vagrant up" command.
+
+```
+cd <path-to-local-forked-git-repo>/vagrant
+
+vagrant up
+```
+
+And now you wait......and wait.....................and wait
 
 <br>
 <br>
