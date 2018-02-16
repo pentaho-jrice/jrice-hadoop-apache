@@ -10,7 +10,7 @@ vagrant up
 
 And then you wait.........and wait............................and wait
 
-Seriously, don't be alarmed if this takes up to 20 - 30 minutes.  
+Seriously, don't be alarmed if this takes up to 20 - 30 minutes.  There's a lot it needs to do the first time.
 
 If it takes longer than an hour, if it hangs, or if it errors out, see [Troubshooting Guide](troubleshooting-setup.md)
 
