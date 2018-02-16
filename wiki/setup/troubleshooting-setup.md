@@ -1,15 +1,12 @@
 # Troubleshooting Issues with Setup
 
-<aside class="notice">
-You must replace `meowmeowmeow` with your personal API key.
-</aside>
+**NOTE** - This project is in early alpha stage and being shared for the first time.
 
-```
-cd <path-tofolder-where-you-want-to-clone>
+If you run into any issues or it does not work as expected, please reach out to me, Joe Rice ([email](joseph.rice@hitachivantara.com), [slack](https://pentaho-engineering.slack.com/messages/D64V59S84))
 
-git clone https://github.com/pentaho-jrice/jrice-hadoop-apache.git
-```
-**Be sure to change the clone URL to your forked repository URL**
+Would love to hear from you.  WE can work through it together.  Or at least let me know so we can document issues / resolutions.
+
+That said, here are a few known things that can go wrong and how to fix
 
 <br>
 <br>
