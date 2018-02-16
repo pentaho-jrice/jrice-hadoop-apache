@@ -1,4 +1,4 @@
-# SSH Into VM
+# Step 6 - SSH Into VM
 
 < Work in Progres >
 

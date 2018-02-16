@@ -1,4 +1,4 @@
-# Customize Your Environment
+# Step 3 - Customize Your Environment
 
 Before firing up the VM for the first time, it would be helpful to customize a few things for your specific setup.
 

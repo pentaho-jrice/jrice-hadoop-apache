@@ -1,4 +1,4 @@
-# "vagrant up" - Start Up Your VM
+# Step 4 - "vagrant up" - Start Up Your VM
 
 Now it's time to fire up your dev VM.  You do this by issueing the "vagrant up" command.
 

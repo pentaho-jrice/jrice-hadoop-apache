@@ -1,4 +1,4 @@
-# Clone this Repo
+# Step 1 - Clone this Repo
 
 Following the [Pentaho Git Process](http://iwiki.pentaho.com/display/ENG/Pentaho+Git+Process):
 

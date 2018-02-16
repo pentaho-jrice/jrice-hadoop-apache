@@ -1,4 +1,4 @@
-# Install VirtualBox and Vagrant
+# Step 2 - Install VirtualBox and Vagrant
 
 You will need to install both Vagrant and VirtualBox if you do not already have them.
 
