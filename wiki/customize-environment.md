@@ -10,9 +10,6 @@ You are telling the VM where your existing git and maven folders are so they can
 export PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR=/path/to/your/git/folder
 ```
 
-<br>
-<br>
-
 | Try it? | Env Var Name | Description  |  Default Value   |
 | --- | ------------ | -----------  | ---------------  |
 | &#x1F538; | PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR   | Root directory of local pentaho git repo.  Suggested to point to the directory that has your current git projects so they are synced.              | ~/dev-env/pentaho/git/ |
