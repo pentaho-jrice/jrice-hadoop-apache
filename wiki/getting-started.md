@@ -1,6 +1,6 @@
 # Getting Started 
 
-Here's what's you ned to get started:
+Here's what's you ned to get started.  Follow these steps:
 
 1. [Clone this Repo to your Local Machine](clone-this-repo.md)
 
