@@ -7,7 +7,7 @@ You do this by setting environment variables on your local machine. For now, set
 You are telling the VM where your existing git and maven folders are so they can sync and be available inside the VM
 
 ```
-export PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR=/path/to/your/git/folder
+export PENT_DEV_ENV_LOCAL_GIT_PROJECTS_DIR=/path/to/your/git/root/folder
 ```
 
 | Try it? | Env Var Name | Description  |  Default Value   |
