@@ -1,6 +1,6 @@
 # Step 6 - SSH Into VM
 
-< Work in Progres >
+If all went well and it did not error out.....Congratulations.  You now have a VM with a running Hadoop cluster, Docker Swwarm Node, and a bunch of other goodies.
 
 
 <br>
