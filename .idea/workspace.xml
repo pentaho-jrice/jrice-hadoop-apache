@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75bdef15-40f8-4392-a49d-e66018910932" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/customize-environment.md" afterPath="$PROJECT_DIR$/wiki/customize-environment.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wiki/setup/troubleshooting-setup.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wiki/clone-this-repo.md" afterPath="$PROJECT_DIR$/wiki/setup/clone-this-repo.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wiki/customize-environment.md" afterPath="$PROJECT_DIR$/wiki/setup/customize-environment.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wiki/getting-started.md" afterPath="$PROJECT_DIR$/wiki/setup/getting-started.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wiki/install-virtual-box-vagrant.md" afterPath="$PROJECT_DIR$/wiki/setup/install-virtual-box-vagrant.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wiki/ssh-into-vm.md" afterPath="$PROJECT_DIR$/wiki/setup/ssh-into-vm.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/wiki/vagrant-up.md" afterPath="$PROJECT_DIR$/wiki/setup/vagrant-up.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wiki/whats-in-the-box.md" afterPath="$PROJECT_DIR$/wiki/whats-in-the-box.md" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +37,24 @@
         </entry>
       </file>
       <file leaf-file-name="getting-started.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wiki/getting-started.md">
+        <entry file="file://$PROJECT_DIR$/wiki/setup/getting-started.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="42">
-                <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+              <first_editor relative-caret-position="378">
+                <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="troubleshooting-setup.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wiki/setup/troubleshooting-setup.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="378">
+                <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -41,7 +63,7 @@
         </entry>
       </file>
       <file leaf-file-name="clone-this-repo.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wiki/clone-this-repo.md">
+        <entry file="file://$PROJECT_DIR$/wiki/setup/clone-this-repo.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="336">
@@ -53,12 +75,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vagrant-up.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wiki/vagrant-up.md">
+      <file leaf-file-name="vagrant-up.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wiki/setup/vagrant-up.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="210">
-                <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+              <first_editor relative-caret-position="252">
+                <caret line="12" column="149" lean-forward="false" selection-start-line="12" selection-start-column="149" selection-end-line="12" selection-end-column="149" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -67,7 +89,7 @@
         </entry>
       </file>
       <file leaf-file-name="install-virtual-box-vagrant.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wiki/install-virtual-box-vagrant.md">
+        <entry file="file://$PROJECT_DIR$/wiki/setup/install-virtual-box-vagrant.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="546">
@@ -79,8 +101,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customize-environment.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wiki/customize-environment.md">
+      <file leaf-file-name="customize-environment.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wiki/setup/customize-environment.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="189">
@@ -93,7 +115,7 @@
         </entry>
       </file>
       <file leaf-file-name="ssh-into-vm.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wiki/ssh-into-vm.md">
+        <entry file="file://$PROJECT_DIR$/wiki/setup/ssh-into-vm.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="168">
@@ -162,10 +184,13 @@
         <option value="$PROJECT_DIR$/wiki/whats-in-the-box.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/wiki/clone-this-repo.md" />
-        <option value="$PROJECT_DIR$/wiki/getting-started.md" />
         <option value="$PROJECT_DIR$/wiki/install-virtual-box-vagrant.md" />
-        <option value="$PROJECT_DIR$/wiki/vagrant-up.md" />
         <option value="$PROJECT_DIR$/wiki/customize-environment.md" />
+        <option value="$PROJECT_DIR$/wiki/vagrant-up.md" />
+        <option value="$PROJECT_DIR$/wiki/getting-started.md" />
+        <option value="$PROJECT_DIR$/wiki/setup/getting-started.md" />
+        <option value="$PROJECT_DIR$/wiki/setup/troubleshooting-setup.md" />
+        <option value="$PROJECT_DIR$/wiki/setup/vagrant-up.md" />
       </list>
     </option>
   </component>
@@ -652,6 +677,12 @@
               <item name="jrice-hadoop-apache" type="462c0819:PsiDirectoryNode" />
               <item name="wiki" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jrice-hadoop-apache" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jrice-hadoop-apache" type="462c0819:PsiDirectoryNode" />
+              <item name="wiki" type="462c0819:PsiDirectoryNode" />
+              <item name="setup" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -668,7 +699,11 @@
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - Pentaho Corp/dev-env/sandbox/BACKLOG-XXX - Pentaho Hadoop VM/notres-on-pentaho-hadoop-dev-env.md" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\git\pentaho\jrice-hadoop-apache\wiki\setup" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git\pentaho\jrice-hadoop-apache\wiki\setup" />
       <recent name="C:\git\pentaho\jrice-hadoop-apache\wiki" />
     </key>
   </component>
@@ -784,12 +819,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518483292240</updated>
-      <workItem from="1518483296834" duration="50507000" />
+      <workItem from="1518483296834" duration="51129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50507000" />
+    <option name="totallyTimeSpent" value="51129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -849,7 +884,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wiki/ssh-into-vm.md">
+    <entry file="file://$PROJECT_DIR$/wiki/setup/ssh-into-vm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="168">
@@ -882,18 +917,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wiki/getting-started.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="42">
-            <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wiki/clone-this-repo.md">
+    <entry file="file://$PROJECT_DIR$/wiki/setup/clone-this-repo.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="336">
@@ -904,18 +928,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wiki/vagrant-up.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wiki/install-virtual-box-vagrant.md">
+    <entry file="file://$PROJECT_DIR$/wiki/setup/install-virtual-box-vagrant.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="546">
@@ -926,11 +939,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wiki/customize-environment.md">
+    <entry file="file://$PROJECT_DIR$/wiki/setup/customize-environment.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="189">
             <caret line="9" column="65" lean-forward="false" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wiki/setup/troubleshooting-setup.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="378">
+            <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wiki/setup/getting-started.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="378">
+            <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wiki/setup/vagrant-up.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="252">
+            <caret line="12" column="149" lean-forward="false" selection-start-line="12" selection-start-column="149" selection-end-line="12" selection-end-column="149" />
             <folding />
           </first_editor>
           <second_editor />

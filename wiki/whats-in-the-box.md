@@ -42,5 +42,5 @@ Alright, enough yakkety yak.  Time to clackity clack.
 <br>
 <br>
 
-[Get Started >](getting-started.md)
+[Get Started >](setup/getting-started.md)
 
