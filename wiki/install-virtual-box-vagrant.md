@@ -2,7 +2,7 @@
 
 You will need to install both Vagrant and VirtualBox if you do not already have them.
 
-Installation for both are pretty simple.  Download the installer for your OS.  Run the installer.  Follow directions and choose defaults. 
+Installation for both are pretty simple.  Download the installer for your OS.  Run the installer.  Follow directions and choose defaults when in doubt. 
 
 Resources are below.
 
