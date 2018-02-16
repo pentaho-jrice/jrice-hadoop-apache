@@ -20,7 +20,7 @@ After you install Vagrant, you'll need to do a 1-time install of vb-guest vagran
 This will make sure your files stay in sync between desktop and VM
 
 ```
-cd <path-to-local-repo>/vagrant
+cd <path-to-local-forked-repo>/vagrant
 
 vagrant plugin install vagrant-vbguest`
 ```
