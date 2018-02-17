@@ -135,9 +135,9 @@ echo "**************************************************************************
 #
 # dos2unix the config & script files since they're probably edited on local windows machine
 #
-find /home/vagrant/config-files -type f -print0 | xargs -0 dos2unix
-find /home/vagrant/scripts -type f -print0 | xargs -0 dos2unix
-find /home/vagrant/provision -type f -print0 | xargs -0 dos2unix
+find $APP_RESOURCES_DIR -type f -print0 | xargs -0 dos2unix
+find $VM_SCRIPTS_DIR -type f -print0 | xargs -0 dos2unix
+find $USER_SCRIPTS_DIR -type f -print0 | xargs -0 dos2unix
 
 sudo dos2unix /etc/profile.d/*
 

@@ -24,18 +24,20 @@ Vagrant.configure(2) do |config|
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   #define default values for environment variables
   
-  default_local_git_projects_dir = "~/dev-env/pentaho/git/"
-  default_local_apps_dir = "~/dev-env/pentaho/apps/"
-  default_local_maven_conf_dir = "~/dev-env/pentaho/maven/conf/"
+  default_local_git_projects_dir = "~/dev-env/pentaho/git"
+  default_local_apps_dir = "~/dev-env/pentaho/apps"
+  default_local_maven_conf_dir = "~/dev-env/pentaho/maven/conf"
   default_local_maven_repo_dir = "~/.m2"
-  default_local_aws_dir = "~/dev-env/pentaho/aws/"
-  default_local_aws_key_file_dir = "~/dev-env/pentaho/aws-keys/"
-  default_local_share_dir = "~/dev-env/pentaho/share/"
-  default_local_pentaho_pdi_dir = "~/dev-env/pentaho/pdi/"
-  default_local_pentaho_user_dir = "~/.pentaho/"
-  default_local_pentaho_ael_dir = "~/dev-env/pentaho/ael/"
-  default_local_pentaho_server_dir = "~/dev-env/pentaho/server/"
-  default_local_user_scripts_dir = "~/dev-env/user-scripts/"
+  default_local_aws_dir = "~/.aws"
+  default_local_aws_key_file_dir = "~/dev-env/pentaho/aws-keys"
+  default_local_share_dir = "~/dev-env/pentaho/share"
+  default_local_pentaho_pdi_dir = "~/dev-env/pentaho/pdi"
+  default_local_pentaho_user_dir = "~/.pentaho"
+  default_local_pentaho_ael_dir = "~/dev-env/pentaho/ael"
+  default_local_pentaho_server_dir = "~/dev-env/pentaho/server"
+  default_local_user_scripts_dir = "~/dev-env/user-scripts"
+  default_local_app_resources_dir = "../app-resources"
+  default_local_vm_scripts_dir = "../scripts/vm"
 
   default_vm_git_projects_dir = "/home/vagrant/git"
   default_vm_apps_dir = "/home/vagrant/workspace/apps"
@@ -44,12 +46,13 @@ Vagrant.configure(2) do |config|
   default_vm_aws_dir = "/home/vagrant/.aws"
   default_vm_aws_key_file_dir = "/home/vagrant/aws-keys"
   default_vm_share_dir = "/home/vagrant/share"
-  default_vm_pentaho_pdi_dir = "/home/vagrant/pentaho/pdi/"
-  default_vm_pentaho_user_dir = "/home/vagrant/.pentaho/"
-  default_vm_pentaho_ael_dir = "/home/vagrant/pentaho/ael/"
-  default_vm_pentaho_server_dir = "/home/vagrant/pentaho/server/"
-  default_vm_user_scripts_dir = "/home/vagrant/user-scripts/"
-  default_vm_provision_dir = "/home/vagrant/provision/"
+  default_vm_pentaho_pdi_dir = "/home/vagrant/pentaho/pdi"
+  default_vm_pentaho_user_dir = "/home/vagrant/.pentaho"
+  default_vm_pentaho_ael_dir = "/home/vagrant/pentaho/ael"
+  default_vm_pentaho_server_dir = "/home/vagrant/pentaho/server"
+  default_vm_user_scripts_dir = "/home/vagrant/user-scripts"
+  default_vm_app_resources_dir = "/home/vagrant/app_resources"
+  default_vm_vm_scripts_dir = "/home/vagrant/vm-scripts"
 
   default_aws_key_file_name = "pentaho-build.pem"
     
@@ -77,7 +80,11 @@ Vagrant.configure(2) do |config|
   local_pentaho_user_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_USER_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_USER_DIR'] : "#{default_local_pentaho_user_dir}"
   local_pentaho_ael_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_AEL_HOME'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_AEL_HOME'] : "#{default_local_pentaho_ael_dir}"
   local_pentaho_server_dir = ENV['PENT_DEV_ENV_LOCAL_PENTAHO_SERVER_HOME'] ? ENV['PENT_DEV_ENV_LOCAL_PENTAHO_SERVER_HOME'] : "#{default_local_pentaho_server_dir}"
-  local_user_scripts_dir = ENV['PENT_DEV_ENV_LOCAL_USER_SCRIPT_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_USER_SCRIPT_DIR'] : "#{default_local_user_scripts_dir}"
+  local_user_scripts_dir = ENV['PENT_DEV_ENV_LOCAL_USER_SCRIPTS_DIR'] ? ENV['PENT_DEV_ENV_LOCAL_USER_SCRIPTS_DIR'] : "#{default_local_user_scripts_dir}"
+
+  # These directories are baked into the vagrat project.  The come from the repo and are not expected to be overriden
+  local_app_resources_dir = default_local_app_resources_dir
+  local_vm_scripts_dir = default_local_vm_scripts_dir
 
   vm_git_projects_dir = ENV['PENT_DEV_ENV_VM_GIT_PROJECTS_DIR'] ? ENV['PENT_DEV_ENV_VM_GIT_PROJECTS_DIR'] : "#{default_vm_git_projects_dir}"
   vm_apps_dir = ENV['PENT_DEV_ENV_VM_APPS_DIR'] ? ENV['PENT_DEV_ENV_VM_APPS_DIR'] : "#{default_vm_apps_dir}"
@@ -90,8 +97,10 @@ Vagrant.configure(2) do |config|
   vm_pentaho_user_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_USER_DIR'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_USER_DIR'] : "#{default_vm_pentaho_user_dir}"
   vm_pentaho_ael_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_AEL_HOME'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_AEL_HOME'] : "#{default_vm_pentaho_ael_dir}"
   vm_pentaho_server_dir = ENV['PENT_DEV_ENV_VM_PENTAHO_SERVER_HOME'] ? ENV['PENT_DEV_ENV_VM_PENTAHO_SERVER_HOME'] : "#{default_vm_pentaho_server_dir}"
-  vm_user_scripts_dir = ENV['PENT_DEV_ENV_VM_USER_SCRIPT_DIR'] ? ENV['PENT_DEV_ENV_VM_USER_SCRIPT_DIR'] : "#{default_vm_user_scripts_dir}"
-  vm_provision_dir = ENV['PENT_DEV_ENV_VM_PROVISION_DIR'] ? ENV['PENT_DEV_ENV_VM_PROVISION_DIR'] : "#{default_vm_provision_dir}"
+  vm_user_scripts_dir = ENV['PENT_DEV_ENV_VM_USER_SCRIPTS_DIR'] ? ENV['PENT_DEV_ENV_VM_USER_SCRIPTS_DIR'] : "#{default_vm_user_scripts_dir}"
+
+  vm_app_resources_dir = ENV['PENT_DEV_ENV_VM_APP_RESOURCES_DIR'] ? ENV['PENT_DEV_ENV_VM_APP_RESOURCES_DIR'] : "#{default_vm_app_resources_dir}"
+  vm_vm_scripts_dir = ENV['PENT_DEV_ENV_VM_SCRIPTS_DIR'] ? ENV['PENT_DEV_ENV_VM_SCRIPTS_DIR'] : "#{default_vm_vm_scripts_dir}"
 
   aws_key_file_name = ENV['PENT_DEV_ENV_AWS_KEY_FILE_NAME'] ? ENV['PENT_DEV_ENV_AWS_KEY_FILE_NAME'] : "#{default_aws_key_file_name}"
   
@@ -100,9 +109,8 @@ Vagrant.configure(2) do |config|
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Set up synced folders between local machine and dev-env VM.
   # -----------------------------------------------------------------------------------------------------------------------------------------------
-  config.vm.synced_folder "scripts", "/home/vagrant/scripts", create: true
-  config.vm.synced_folder "config-files", "/home/vagrant/config-files", create: true
-  config.vm.synced_folder "provision ", "#{vm_provision_dir}", create: true
+  config.vm.synced_folder "#{local_app_resources_dir}", "#{vm_app_resources_dir}", create: true
+  config.vm.synced_folder "#{local_vm_scripts_dir}", "#{vm_vm_scripts_dir}", create: true
   
   config.vm.synced_folder "#{local_git_projects_dir}", "#{vm_git_projects_dir}", create: true
   config.vm.synced_folder "#{local_apps_dir}", "#{vm_apps_dir}", create: true
@@ -126,14 +134,16 @@ Vagrant.configure(2) do |config|
   # First, install dos2unix cuz we're gonna need it
   config.vm.provision :shell, inline: "apt-get install -y dos2unix", run: "always"
 
-  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/hadoop/set-hadoop-env-vars.sh /etc/profile.d", run: "always"
-  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/hive/set-hive-env-vars.sh /etc/profile.d", run: "always"
-  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/pentaho-ael/set-pentaho-ael-env-vars.sh /etc/profile.d", run: "always"
-  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/pentaho-pdi/set-pentaho-pdi-env-vars.sh /etc/profile.d", run: "always"
-  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/pentaho-server/set-pentaho-server-env-vars.sh /etc/profile.d", run: "always"
-  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/pig/set-pig-env-vars.sh /etc/profile.d", run: "always"
-  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/spark/set-spark-env-vars.sh /etc/profile.d", run: "always"
-  config.vm.provision :shell, inline: "cp /home/vagrant/config-files/global-vm/set-global-vm-static-env-vars.sh /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/hadoop-eco/hadoop/env-vars/* /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/hadoop-eco/hive/env-vars/* /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/hadoop-eco/pig/env-vars/* /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/hadoop-eco/spark/env-vars/* /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/pentaho/ael/env-vars/* /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/pentaho/pdi/env-vars/* /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/pentaho/server/env-vars/* /etc/profile.d", run: "always"
+  
+  # Copy environment variables set by user - if they exist
+  config.vm.provision :shell, inline: "cp #{vm_user_scripts_dir}/env-vars/* /etc/profile.d 2>/dev/null || :", run: "always"
   config.vm.provision :shell, inline: "dos2unix /etc/profile.d/*", run: "always"
   
   
@@ -142,9 +152,6 @@ Vagrant.configure(2) do |config|
   # 
   # Each of these enviornment variables will be availabe inside the VM.  Scripts can depend on them being set.
   # -----------------------------------------------------------------------------------------------------------------------------------------------
-  
-  config.vm.provision :shell, inline: "rm -f /etc/profile.d/hadoop-env-vars.sh", run: "always"
-  config.vm.provision :shell, inline: "> /etc/profile.d/hadoop-env-vars.sh", run: "always"
   
   config.vm.provision :shell, inline: "rm -f /etc/profile.d/set-vm-env-vars.sh", run: "always"
   config.vm.provision :shell, inline: "> /etc/profile.d/set-vm-env-vars.sh", run: "always"
@@ -161,32 +168,51 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, inline: "echo \"export PENTAHO_USER_DIR=#{vm_pentaho_user_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
   config.vm.provision :shell, inline: "echo \"export PENTAHO_AEL_HOME=#{vm_pentaho_ael_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
   config.vm.provision :shell, inline: "echo \"export PENTAHO_SERVER_HOME=#{vm_pentaho_server_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
-  config.vm.provision :shell, inline: "echo \"export USER_SCRIPT_DIR=#{vm_user_scripts_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export USER_SCRIPTS_DIR=#{vm_user_scripts_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
 
+  config.vm.provision :shell, inline: "echo \"export APP_RESOURCES_DIR=#{vm_app_resources_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "echo \"export VM_SCRIPTS_DIR=#{vm_vm_scripts_dir}\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
+
+  config.vm.provision :shell, inline: "echo \"export JAVA_HOME=/usr/lib/jvm/java-8-oracle\" >> /etc/profile.d/set-vm-env-vars.sh", run: "always"
   
-  config.vm.provision :shell, inline: "echo \"export PATH=$PATH:/home/vagrant/scripts:/home/vagrant/provision:/home/vagrant/scripts/ael\" >> /etc/profile.d/hadoop-env-vars.sh", run: "always"
+  config.vm.provision :shell, inline: "rm -f /etc/profile.d/set-vm-env-path.sh", run: "always"
+  config.vm.provision :shell, inline: "> /etc/profile.d/set-vm-env-path.sh", run: "always"
+  
+  config.vm.provision :shell, inline: "echo \"export PATH=$PATH:$USER_SCRIPTS_DIR:$VM_SCRIPTS_DIR\" >> /etc/profile.d/set-vm-env-path.sh", run: "always"
 
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Run Provision scripts to setup Java 8 and hadoop apps.
   # -----------------------------------------------------------------------------------------------------------------------------------------------
+  # Install Java 8
   config.vm.provision :shell, inline: 'wget --no-check-certificate https://github.com/aglover/ubuntu-equip/raw/master/equip_java8.sh && bash equip_java8.sh'
+
+  # Install and configure common utilities and tools (docker, terraform, ansible, etc
   config.vm.provision "shell", path: "provision/setup-env.sh"
-  config.vm.provision "shell", path: "provision/install-hadoop.sh"
-  config.vm.provision "shell", path: "provision/install-hive.sh"
-  config.vm.provision "shell", path: "provision/install-pig.sh"
-  config.vm.provision "shell", path: "provision/install-spark.sh"
-  config.vm.provision "shell", path: "provision/configure-hadoop.sh"
-  config.vm.provision "shell", path: "provision/configure-spark.sh"
-  config.vm.provision "shell", path: "provision/configure-ael.sh"
-  config.vm.provision "shell", path: "provision/format-hdfs.sh"
-  config.vm.provision "shell", path: "scripts/start-hadoop-hdfs.sh", run: "always"
-  config.vm.provision "shell", path: "provision/create-hdfs-directories-for-mapreduce-history.sh"
-  config.vm.provision "shell", path: "provision/create-hdfs-directories-for-hive.sh"
-  config.vm.provision "shell", path: "provision/create-hdfs-directories-for-spark-history.sh"
-  config.vm.provision "shell", path: "provision/create-hdfs-directories-for-ael.sh"
-  config.vm.provision "shell", path: "provision/set-hdfs-directory-permissions.sh"
-  config.vm.provision "shell", path: "scripts/start-hadoop-yarn.sh", run: "always"
-  config.vm.provision "shell", path: "scripts/start-spark-history-server.sh", run: "always"
+  
+  # Install & configure the apps
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/hadoop/provision/install-hadoop.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/hadoop/provision/configure-hadoop.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/hadoop/provision/format-hdfs.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/hadoop/scripts/start-hadoop-hdfs.sh", run: "always"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/hadoop/provision/create-hdfs-directories-for-mapreduce-history.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/hadoop/scripts//start-hadoop-yarn.sh", run: "always"
+  
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/hive/provision/install-hive.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/hive/provision/create-hdfs-directories-for-hive.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/hive/provision/configure-hive.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/hive/scripts/start-hive.sh"
+  
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/pig/provision/install-pig.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/pig/provision/configure-pig.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/pig/scripts/start-pig.sh"
+  
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/spark/provision/install-spark.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/spark/provision/configure-spark.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/spark/provision/create-hdfs-directories-for-spark-history.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/hadoop-eco/spark/scripts//start-spark-history-server.sh", run: "always"
+
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/pentaho/ael/provision/configure-ael.sh"
+  config.vm.provision "shell", path: "#{local_app_resources_dir}/pentaho/ael/provision/create-hdfs-directories-for-ael.sh"
 
   # -----------------------------------------------------------------------------------------------------------------------------------------------
   # Expose ports of Hadoop web apps and services.
