@@ -8,7 +8,7 @@ Would love to hear from you.  We can work through it together.  Or at least docu
 
 That said, here are a few known things that can go wrong and how to fix
 
-### Memory
+### Issue - Memory
 
 **Problem**
 
@@ -32,7 +32,7 @@ This the snippet you want to change
   end
 ```
 
-### 64-Bit Linux not Available on Windows
+### Issue - 64-Bit Linux not Available on Windows
 
 **Problelm**
 
@@ -51,3 +51,80 @@ But this video does a great job of ahowing step-by-step how to fix:  https://www
 
 [< Getting Started](getting-started.md) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Getting Started Home](getting-started.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [Intall Virtual Box & Vagrant >](install-virtual-box-vagrant.md)
 
+
+### Issue - Errors on "vagrant up" - No Vagrantfile
+
+**Problem**
+
+You type "vagrant up" and get the following error message
+
+```
+A Vagrant environment or target machine is required to run this
+command. Run `vagrant init` to create a new Vagrant environment. Or,
+get an ID of a target machine from `vagrant global-status` to run
+this command on. A final option is to change to a directory with a
+Vagrantfile and to try again.
+```
+
+**Solution**
+
+You need to run "vagrant up" from a directory that has a Vagrant file.  
+
+This project includes a Vagrantfile already configured.  Make sure you are in that directory before "vagrant up"
+
+<path-to-local-forked-git-repo>/**vagrant**
+
+### Issue - Errors on "vagrant up" - VirtualBox Issues
+
+**Problem**
+
+You type "vagrant up" and get the following error message
+
+```
+No usable default provider could be found for your system.
+
+Vagrant relies on interactions with 3rd party systems, known as
+"providers", to provide Vagrant with resources to run development
+environments. Examples are VirtualBox, VMware, Hyper-V.
+
+The easiest solution to this message is to install VirtualBox, which
+is available for free on all major platforms.
+
+If you believe you already have a provider available, make sure it
+is properly installed and configured. You can see more details about
+why a particular provider isn't working by forcing usage with
+`vagrant up --provider=PROVIDER`, which should give you a more specific
+error message for that particular provider.
+```
+
+**Solution**
+
+There are 2 possible causes for this.  VirtualBox is not installed on your local machine.  Or the version of 
+VirtualBox is not compatible with the version of Vagrant you have.
+
+1. Make sure Virtual Box is installed on your computer.
+2. Type the following command to get a more specific error message:
+
+```
+vagrant up --provider=virtualbox
+```
+
+In my case, I got this message as a response:
+
+```
+The provider 'virtualbox' that was requested to back the machine
+'default' is reporting that it isn't usable on this system. The
+reason is shown below:
+
+Vagrant has detected that you have a version of VirtualBox installed
+that is not supported by this version of Vagrant. Please install one of
+the supported versions listed below to use Vagrant:
+
+4.0, 4.1, 4.2, 4.3, 5.0, 5.1
+
+A Vagrant update may also be available that adds support for the version
+you specified. Please check www.vagrantup.com/downloads.html to download
+the latest version.
+```
+
+So, we can see that even though Ih ave VirtualBox installed, the version I have installed is not compatible with Vagrant.  You can either upgrade Vagrant or upgrade VirutualBox (or both).

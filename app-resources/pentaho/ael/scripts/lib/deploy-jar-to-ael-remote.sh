@@ -6,7 +6,7 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
-source $DIR/set-env.sh
+source $DIR/set-ael-env.sh
 
 lib/scp-from-remote-to-local.sh $REMOTE_AEL_SERVER_HOSTNAME $REMOTE_AEL_SERVER_USERNAME  $REMOTE_AEL_SERVER_PASSWORD $SOURCE_PDI_ENGINE_OPERATIONS_JAR_PATH $TARGET_AEL_PDI_ENGINE_OPS_JAR_PATH
 

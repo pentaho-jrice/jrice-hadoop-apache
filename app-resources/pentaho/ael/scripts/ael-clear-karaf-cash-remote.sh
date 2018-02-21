@@ -8,7 +8,7 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
-source $DIR/set-env.sh
+source $DIR/set-ael-env.sh
 
 echo "."
 echo "*********************************************************************************"

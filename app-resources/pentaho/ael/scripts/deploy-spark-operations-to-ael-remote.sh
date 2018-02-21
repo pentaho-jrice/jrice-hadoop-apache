@@ -6,7 +6,7 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
-source $DIR/set-env.sh
+source $DIR/set-ael-env.sh
 
 PENTAHO_EE_GIT_REPO=$GIT_PROJECTS_DIR/pentaho-ee
 PDI_ENGINE_OPERATIONS_HOME=$PENTAHO_EE_GIT_REPO/adaptive-execution/pdi-spark-app/pdi-spark-engine-operations

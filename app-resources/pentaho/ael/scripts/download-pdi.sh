@@ -46,7 +46,7 @@ echo "    - from this urL:  $PDI_DOWNLOAD_URL "
 echo "    - To this dir:    $PDI_DOWNLOAD_DIR/$PDI_FILE_VERSION_NUMBER "
 echo "*********************************************************************************"
 
-#time curl -O $PDI_DOWNLOAD_URL
+time curl -O $PDI_DOWNLOAD_URL
 
 #
 # Create new distribution folder for new version and unzip PDI into that folder

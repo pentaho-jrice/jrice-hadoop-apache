@@ -141,9 +141,11 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/pentaho/ael/env-vars/* /etc/profile.d", run: "always"
   config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/pentaho/pdi/env-vars/* /etc/profile.d", run: "always"
   config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/pentaho/server/env-vars/* /etc/profile.d", run: "always"
+  config.vm.provision :shell, inline: "cp #{vm_app_resources_dir}/pentaho/common/env-vars/* /etc/profile.d", run: "always"
   
   # Copy environment variables set by user - if they exist
   config.vm.provision :shell, inline: "cp #{vm_user_scripts_dir}/env-vars/* /etc/profile.d 2>/dev/null || :", run: "always"
+  config.vm.provision :shell, inline: "cp #{vm_vm_scripts_dir}/env-vars/* /etc/profile.d 2>/dev/null || :", run: "always"
   config.vm.provision :shell, inline: "dos2unix /etc/profile.d/*", run: "always"
   
   
